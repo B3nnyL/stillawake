@@ -4,12 +4,14 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "jest"
+    "test": "NODE_ENV=test jest --watchAll"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "next": "^7.0.2",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "save": "^2.3.3"
   },
   "devDependencies": {
     "babel-jest": "^23.6.0",
