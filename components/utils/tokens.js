@@ -1,0 +1,24 @@
+export const RADIUS = "7px";
+export const BLUE_COLOR = "#007AFA";
+export const BLACK_COLOR = "#000";
+export const WHITE_COLOR = "#fff";
+export const BLACK_COLOR_A1 = "#666";
+export const BLACK_COLOR_A2 = "#999";
+export const WHITE_COLOR_A1 = "#e1e1e1";
+export const LARGE_BUTTON_WIDTH = "200px";
+export const SMALL_BUTTON_WIDTH = "100px";
+export const LARGE_BUTTON_HEIGHT = "40px";
+export const SMALL_BUTTON_HEIGHT = "20px";
+export const BUTTON_SHADOW = "0 5px 10px 0 rgba(0, 0, 0, 0.12)";
+export const BADGE_MIN_WIDTH = 22;
+export const BADEG_HEIGHT = 16;
+export const INPUT_WIDTH = 200;
+export const INPUT_SHADOW = "0 2px 4px 0 rgba(0, 0, 0, 0.12)";
+export const DESKTOP_NAV_HEIGHT = 64;
+export const DESKTOP_SUBNAV_HEIGHT = 48;
+export const SUBMENU_WIDTH = 197;
+export const SUBMENU_HEIGHT = "auto";
+export const SUBMENU_FOOTER_HEIGHT = 30;
+export const PADDING_M = "10px";
+export const FONT_FAMILY_SANS =
+  '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif';
