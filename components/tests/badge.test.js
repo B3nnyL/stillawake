@@ -12,7 +12,6 @@ describe("<Badge />", () => {
 
   it("render text", () => {
     const wrapper = shallow(<Badge>{fakeData}</Badge>);
-    console.log(wrapper.debug());
     expect(wrapper.find("h1")).toBeTruthy;
   });
 });
