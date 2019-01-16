@@ -71,17 +71,10 @@ export default class DesktopNav extends React.Component {
   render() {
     return (
       <Fragment>
-        <Fragment>
-          <TopBar visible={this.state.isTopbarVisible}> Yo </TopBar>
-          <div className="cross" onClick={this.handleTopBarVisible}>
-            <div className="cross--left" />
-            <div className="cross--right" />
-          </div>
-        </Fragment>
         <nav>
           <div className="logo-container">
             <Link prefetch href="/">
-              <Logo white size="35px" />
+              <Logo white size={35} />
             </Link>
           </div>
           <ul className="start">
@@ -196,9 +189,10 @@ export default class DesktopNav extends React.Component {
           {`
             nav {
               text-align: center;
+              margin-top: 30px;
               width: 1018px;
               height: 84px;
-              margin: 0 auto;
+              margin: 0px auto;
               display: grid;
               grid-template-columns: 40px 4fr 100px 100px 50px;
             }
@@ -235,7 +229,7 @@ export default class DesktopNav extends React.Component {
               right: 20px;
               width: 15px;
               height: 15px;
-              z-index: 1000;
+              z-index: 1500;
             }
 
             .cross--left {

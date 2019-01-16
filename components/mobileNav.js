@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import NavLink from "./navLink";
 import Logo from "./logo";
 import { Fragment, Component } from "react";
@@ -33,18 +34,18 @@ export default class MobileNav extends Component {
   render() {
     return (
       <Fragment>
-        <Fragment>
+        {/* <div>
           <TopBar visible={this.state.isTopbarVisible}> Yo</TopBar>
           <div className="cross" onClick={this.handleTopBarVisible}>
             <div className="cross--left" />
             <div className="cross--right" />
           </div>
-        </Fragment>
-        <nav>
+        </div> */}
+        <nav style={{ height: this.state.isToggleClicked ? "100vh" : "100px" }}>
           <div className="top container">
             <div className="logo">
-              <NavLink href="/">
-                <Logo filled />
+              <NavLink href="#">
+                <Logo filled white />
                 <h2>Now</h2>
               </NavLink>
             </div>
@@ -75,7 +76,7 @@ export default class MobileNav extends Component {
             }}
           >
             <li>
-              <Input placeholder="FEEDBACKS." width="95%" />
+              <Input placeholder="FEEDBACKS." width={95} />
             </li>
           </ul>
           <NavList
@@ -88,7 +89,7 @@ export default class MobileNav extends Component {
           {`
             nav {
               width: 100vw;
-              height: 100vh;
+              height: auto;
               display: grid;
               grid-template-columns: 5vw auto 5vw;
               grid-template-rows: 84px 50px auto;
@@ -121,6 +122,7 @@ export default class MobileNav extends Component {
               border-bottom: 1px #eaeaea solid;
               grid-column: 2/3;
               justify-content: center;
+              margin-top: 27px;
             }
             .container h2 {
               margin-bottom: 14px;
@@ -146,7 +148,7 @@ export default class MobileNav extends Component {
               right: 20px;
               width: 15px;
               height: 15px;
-              z-index: 1000;
+              z-index: 1500;
             }
 
             .cross--left {
@@ -248,6 +250,7 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
           grid-row: 1/2;
           display: flex;
           flex-direction: column;
+          margin-top: 30px;
         }
 
         .use {
@@ -273,3 +276,9 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
     </style>
   </div>
 );
+
+NavList.propTypes = {
+  productContents: PropTypes.array,
+  useCaseContents: PropTypes.array,
+  visible: PropTypes.bool
+};
