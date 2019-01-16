@@ -81,7 +81,7 @@ export default class DesktopNav extends React.Component {
         <nav>
           <div className="logo-container">
             <Link prefetch href="/">
-              <Logo filled size="35px" />
+              <Logo white size="35px" />
             </Link>
           </div>
           <ul className="start">
@@ -194,28 +194,6 @@ export default class DesktopNav extends React.Component {
         </nav>
         <style jsx>
           {`
-            :global(body) {
-              margin: 0;
-              font-family: -apple-system, BlinkMacSystemFont, Avenir Next,
-                Avenir, Helvetica, sans-serif;
-              font-size: 14px;
-            }
-            :global(*) {
-              margin: 0;
-              padding: 0;
-              border: 0;
-              font-size: 100%;
-              font: inherit;
-              vertical-align: baseline;
-            }
-            :global(h2) {
-              font-weight: 500;
-              font-size: 16px;
-              margin: 2px;
-            }
-            :global(a) {
-              cursor: pointer;
-            }
             nav {
               text-align: center;
               width: 1018px;
