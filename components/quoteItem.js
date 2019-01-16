@@ -52,6 +52,24 @@ const QuoteItem = withPure(({ quote }) => {
           font-size: 14px;
           font-weight: 500;
         }
+
+        @media screen and (max-width: 996px) {
+          .quote {
+            width: 90%;
+            margin: 0px auto;
+          }
+          .quote p:before {
+            content: "“";
+            font-size: 90px;
+            left: -10px;
+            top: -50px;
+            color: #efefef;
+            z-index: -10;
+            position: absolute;
+            font-family: "Helvetica-Nuew";
+            font-stretch: condensed;
+          }
+        }
       `}</style>
     </div>
   );

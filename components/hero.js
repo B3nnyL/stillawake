@@ -45,7 +45,7 @@ const Hero = withPure(
               font-size: 46px;
               text-align: center;
               font-weight: 600;
-              line-height: 0.91;
+              line-height: 1.5;
               margin-bottom: 41px;
               text-transform: capitalize;
             }
@@ -58,6 +58,29 @@ const Hero = withPure(
               padding: 80px 8px 0px;
               position: relative;
               justify-content: center;
+            }
+
+            @media screen and (max-width: 996px) {
+              .hero {
+                text-align: center;
+                width: 100vw;
+                min-height: 150px;
+                margin: 70px auto;
+                display: grid;
+                grid-template-columns: 10px auto 10px;
+                z-index: 200;
+              }
+
+              .hero--ctas {
+                display: flex;
+                flex-direction: column;
+                padding: 80px 8px 0px;
+                position: relative;
+                margin: 0 auto;
+                align-items: center;
+                justify-content: space-evenly;
+                height: 200px;
+              }
             }
           `}
         </style>

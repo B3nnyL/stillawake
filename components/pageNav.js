@@ -58,6 +58,25 @@ const PageNav = withPure(({ title = "page" }) => {
             padding: 6px 8px;
             position: relative;
           }
+
+          @media screen and (max-width: 996px) {
+            .nav {
+              text-align: center;
+              width: 100vw;
+              height: 40px;
+              margin: 0 auto;
+              display: grid;
+              grid-template-columns: 10px 40px auto 150px 10px;
+              z-index: 300;
+            }
+            .nav__title {
+              grid-column: 2/3;
+            }
+            .nav__items {
+              grid-column: 3/-1;
+              justify-self: end;
+            }
+          }
         `}
       </style>
     </div>

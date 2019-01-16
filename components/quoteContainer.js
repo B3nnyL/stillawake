@@ -12,6 +12,12 @@ const QuoteContainer = withPure(() => (
           min-height: 256px;
           margin: 20px auto;
         }
+        @media screen and (max-width: 996px) {
+          .quote-container {
+            width: 100vw;
+            margin: 10px auto;
+          }
+        }
       `}
     </style>
   </div>

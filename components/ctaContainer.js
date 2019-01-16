@@ -29,6 +29,30 @@ const CtaContainer = withPure(({ children }) => (
           justify-content: space-between;
           align-items: center;
         }
+
+        @media screen and (max-width: 699px) {
+          .cta-container {
+            width: 90vw;
+            max-height: 500px;
+            margin: 10px auto;
+            padding: 0 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .cta-container__slogan {
+            max-width: 90vw;
+            padding-bottom: 40px;
+            margin: 0 auto;
+          }
+          .cta-container__btns {
+            display: flex;
+            flex-direction: column;
+            height: 150px;
+            justify-content: space-around;
+            align-items: center;
+          }
+        }
       `}
     </style>
   </div>

@@ -27,6 +27,15 @@ const BrandContainer = withPure(({ brands }) => {
             justify-self: center;
             justify-content: center;
           }
+
+          @media screen and (max-width: 996px) {
+            .brands {
+              width: 100vw;
+              margin: 10px auto;
+              flex-wrap: nowrap;
+              padding: 0px;
+            }
+          }
         `}
       </style>
     </div>
