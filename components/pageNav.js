@@ -64,7 +64,7 @@ const PageNav = withPure(({ title = "page" }) => {
               text-align: center;
               width: 100vw;
               height: 40px;
-              margin: 0 auto;
+              margin: 40px auto;
               display: grid;
               grid-template-columns: 10px 40px auto 150px 10px;
               z-index: 300;
