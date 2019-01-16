@@ -60,12 +60,16 @@ const NavLink = withPure(
 );
 
 NavLink.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+    PropTypes.any
+  ]),
   href: PropTypes.string,
   className: PropTypes.string,
   up: PropTypes.bool,
   prefetch: PropTypes.bool,
-  badge: PropTypes.element
+  badge: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
 };
 
 export default NavLink;

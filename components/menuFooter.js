@@ -30,7 +30,7 @@ const MenuFooter = withPure(({ content }) => {
 
 MenuFooter.propType = {
   content: PropTypes.shape({
-    badge: PropTypes.element,
+    badge: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
     href: PropTypes.string,
     footerText: PropTypes.string
   })

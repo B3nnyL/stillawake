@@ -82,9 +82,9 @@ const MenuNavContainer = withPure(
 );
 
 MenuNavContainer.propTypes = {
-  CompLeft: PropTypes.element.isRequired,
-  CompRight: PropTypes.element.isRequired,
-  FooterComp: PropTypes.element.isRequired,
+  CompLeft: PropTypes.func.isRequired,
+  CompRight: PropTypes.func.isRequired,
+  FooterComp: PropTypes.func.isRequired,
   contentLeft: PropTypes.object,
   contentRight: PropTypes.object,
   footerContent: PropTypes.object,

@@ -58,7 +58,7 @@ ProductItem.propTypes = {
   content: PropTypes.shape({
     label: PropTypes.string,
     href: PropTypes.string,
-    badge: PropTypes.element,
+    badge: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
     desc: PropTypes.string
   }),
   children: PropTypes.element

@@ -25,8 +25,8 @@ const ProductNavContainer = withPure(
       >
         <div className="productMenu__container--top">
           <div className="items-container">
-            {productContents.map(content => (
-              <ProductItemComp key={content.label} content={content} />
+            {productContents.map((content, i) => (
+              <ProductItemComp key={i} content={content} />
             ))}
           </div>
         </div>
@@ -78,10 +78,10 @@ const ProductNavContainer = withPure(
 );
 
 ProductNavContainer.propTypes = {
-  ProductItemComp: PropTypes.element.isRequired,
-  FooterComp: PropTypes.element.isRequired,
-  productContents: PropTypes.array.isRequired,
-  footerContent: PropTypes.array.isRequired,
+  ProductItemComp: PropTypes.func.isRequired,
+  FooterComp: PropTypes.func.isRequired,
+  productContents: PropTypes.array,
+  footerContent: PropTypes.object,
   visible: PropTypes.bool,
   top: PropTypes.string,
   left: PropTypes.string
