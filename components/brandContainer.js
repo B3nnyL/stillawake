@@ -4,8 +4,8 @@ import withPure from "./hoc/withPure";
 const BrandContainer = withPure(({ brands }) => {
   return (
     <div className="brands">
-      {brands.map(brand => (
-        <li key={brand}>
+      {brands.map((brand, i) => (
+        <li key={i}>
           <div className="brand__container">{brand}</div>
         </li>
       ))}
