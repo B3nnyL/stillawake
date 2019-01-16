@@ -24,7 +24,7 @@ const Badge = WithPure(props => (
 ));
 
 Badge.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
 };
 
 export default Badge;
