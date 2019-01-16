@@ -137,7 +137,7 @@ const Button = WithPure(
 );
 
 Button.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   color: PropTypes.string,
   size: PropTypes.string,
   href: PropTypes.string,
