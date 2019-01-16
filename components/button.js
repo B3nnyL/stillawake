@@ -32,10 +32,8 @@ const Button = WithPure(
               display: inline-block;
               cursor: pointer;
               text-decoration: none;
-              padding: 0.25rem 0.5rem;
-              margin: -0.25rem -0.5rem;
-              margin: 0;
-              padding: 0 2rem;
+              padding: 0.1rem 0.5rem;
+              margin: -0.25rem 0.5rem;
               height: ${LARGE_BUTTON_HEIGHT};
               min-width: ${LARGE_BUTTON_WIDTH};
               border: 1px ${BLUE_COLOR} solid;
@@ -46,11 +44,12 @@ const Button = WithPure(
                 border 0.2s ease, box-shadow 0.2s ease;
               font-size: 14px;
               text-transform: uppercase;
+              box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
             }
             a:hover {
               color: ${BLUE_COLOR};
               background: ${WHITE_COLOR};
-              box-shadow: 0 6px 20px rgba(0, 118, 255, 0.1);
+              box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
             }
             a.black {
               margin: 0;
@@ -70,16 +69,15 @@ const Button = WithPure(
               background: ${BLACK_COLOR};
             }
             a.white {
-              margin: 0;
-              padding: 0 2rem;
-              border: 1px ${WHITE_COLOR_A1} solid;
+              border: 0px ${WHITE_COLOR_A1} solid;
               border-radius: 7px;
               background: ${WHITE_COLOR};
               color: ${BLACK_COLOR_A1};
+              box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
             }
             a.white:hover {
               color: ${BLACK_COLOR};
-              border: 1px ${BLACK_COLOR} solid;
+              border: 0px;
               box-shadow: 0 6px 20px rgba(0, 0, 0, 0.23);
             }
             a.small {
@@ -90,11 +88,10 @@ const Button = WithPure(
               line-height: 2;
             }
             a.large {
-              min-width: ${LARGE_BUTTON_WIDTH};
               max-width: ${LARGE_BUTTON_WIDTH};
               max-height: ${LARGE_BUTTON_HEIGHT};
               text-align: center;
-              line-height: 3.5;
+              line-height: 3;
             }
             a.pink {
               color: #ff0080;
@@ -121,6 +118,7 @@ const Button = WithPure(
               padding: 0;
               border: 0;
               background: transparent;
+              box-shadow: unset;
             }
           `}
         </style>
