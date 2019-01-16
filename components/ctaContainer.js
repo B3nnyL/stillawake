@@ -32,7 +32,7 @@ const CtaContainer = withPure(({ children }) => (
 
         @media screen and (max-width: 699px) {
           .cta-container {
-            width: 90vw;
+            width: 100vw;
             max-height: 500px;
             margin: 10px auto;
             padding: 0 10px;
@@ -49,6 +49,7 @@ const CtaContainer = withPure(({ children }) => (
             display: flex;
             flex-direction: column;
             height: 150px;
+            width: 100%;
             justify-content: space-around;
             align-items: center;
           }
