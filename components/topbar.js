@@ -22,6 +22,24 @@ const TopBar = withPure(({ visible, ...props }) => (
           overflow-x: hidden;
           opacity: 1;
           transition: opacity 200ms ease-in-out;
+          z-index: 2000;
+        }
+
+        @media screen and (max-width: 699px) {
+          .bar {
+            display: block;
+            width: 100vw;
+            padding: 5px;
+            background: ${BLACK_COLOR};
+            text-align: center;
+            font-size: 14px;
+            color: ${WHITE_COLOR};
+            overflow-x: hidden;
+            opacity: 1;
+            transition: opacity 200ms ease-in-out;
+            position: fixed;
+            z-index: 2000;
+          }
         }
       `}
     </style>
@@ -29,7 +47,7 @@ const TopBar = withPure(({ visible, ...props }) => (
 ));
 
 TopBar.propTypes = {
-  children: PropTypes.oneOfType[(PropTypes.string, PropTypes.element)],
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   visible: PropTypes.bool.isRequired
 };
 
