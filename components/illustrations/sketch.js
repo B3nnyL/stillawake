@@ -49,7 +49,7 @@ const Sketch = () => (
         #sketch--oval {
           opacity: 0;
           animation-name: example;
-          animation-duration: 2s;
+          animation-duration: 1s;
           animation-fill-mode: forwards;
           position: relative;
           transform: translate(0px, -30px);
@@ -57,7 +57,7 @@ const Sketch = () => (
 
         #sketch--combined {
           opacity: 0;
-          animation-delay: 2s;
+          animation-delay: 1s;
           animation-duration: 1s;
           animation-fill-mode: forwards;
           animation-name: example-2;
@@ -66,7 +66,7 @@ const Sketch = () => (
         #sketch--rect {
           opacity: 0;
           animation-name: example;
-          animation-duration: 2s;
+          animation-duration: 1s;
           animation-fill-mode: forwards;
           position: relative;
           transform: translate(30px, 0px);

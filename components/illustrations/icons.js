@@ -155,7 +155,7 @@ const icons = () => (
                     <g id="Oval">
                       <use
                         fill="black"
-                        fill-opacity="1"
+                        fillOpacity="1"
                         filter="url(#filter-4)"
                         xlinkHref="#path-3"
                       />
@@ -210,7 +210,7 @@ const icons = () => (
                     <g id="Oval">
                       <use
                         fill="black"
-                        fill-opacity="1"
+                        fillOpacity="1"
                         filter="url(#filter-6)"
                         xlinkHref="#path-5"
                       />
@@ -259,7 +259,7 @@ const icons = () => (
                     <g id="Oval">
                       <use
                         fill="black"
-                        fill-opacity="1"
+                        fillOpacity="1"
                         filter="url(#filter-8)"
                         xlinkHref="#path-7"
                       />
@@ -286,7 +286,7 @@ const icons = () => (
                     <g id="Oval">
                       <use
                         fill="black"
-                        fill-opacity="1"
+                        fillOpacity="1"
                         filter="url(#filter-10)"
                         xlinkHref="#path-9"
                       />
