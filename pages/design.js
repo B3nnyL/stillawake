@@ -16,9 +16,9 @@ import TopBar from "../components/topbar";
 import ResourceContainer from "../components/resourceContainer";
 import Head from "../components/head";
 
-const Home = () => (
+const Design = () => (
   <div>
-    <Head title="Now" />
+    <Head title="For Designer - Now" />
     <TopBar>
       👩‍🎤 Make your serverless design system
       <a style={{ textDecoration: "underline", margin: "0px 10px" }}>
@@ -27,11 +27,33 @@ const Home = () => (
     </TopBar>
     <MediaQuery query="(min-width:997px)">
       <DesktopNav />
-      <PageNav />
+      <PageNav title="Designer" />
+      <Hero />
+      <BrandContainer brands={BRANDS} />
+      <WorkflowExample />
+      <TestExample />
+      <DocumentExample />
+      <QuoteContainer identity="quote" />
+      <CollaborateExample />
+      <ResourceContainer />
+      <CtaContainer>
+        <h1>Just push and code</h1>
+      </CtaContainer>
     </MediaQuery>
     <MediaQuery query="(max-width: 996px)">
       <MobileNav />
       <PageNav />
+      <Hero />
+      <BrandContainer brands={BRANDS} />
+      <WorkflowExample />
+      <TestExample />
+      <DocumentExample />
+      <QuoteContainer identity="quote" />
+      <CollaborateExample />
+      <ResourceContainer />
+      <CtaContainer>
+        <h1>Just push and code</h1>
+      </CtaContainer>
     </MediaQuery>
 
     <style jsx>
@@ -111,4 +133,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default Design;
