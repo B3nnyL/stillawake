@@ -1,34 +1,60 @@
 import React from "react";
-import Link from "next/link";
 import DesktopNav from "../components/desktopNav";
 import MobileNav from "../components/mobileNav";
 import PageNav from "../components/pageNav";
 import Hero from "../components/hero";
 import BrandContainer from "../components/brandContainer";
 import WorkflowExample from "../components/workflowExample";
+import TestExample from "../components/testExample";
 import QuoteContainer from "../components/quoteContainer";
 import CtaContainer from "../components/ctaContainer";
 import { BRANDS } from "../utils/brands";
 import MediaQuery from "react-responsive";
+import DocumentExample from "../components/documentExample";
+import CollaborateExample from "../components/collaborateExample";
+import TopBar from "../components/topbar";
+import ResourceContainer from "../components/resourceContainer";
+import Head from "../components/head";
 
 const Home = () => (
   <div>
-    <div>
-      <MediaQuery query="(min-width:997px)">
-        <DesktopNav />
-      </MediaQuery>
-      <MediaQuery query="(max-width: 996px)">
-        <MobileNav />
-      </MediaQuery>
+    <Head title="Now" />
+    <TopBar>
+      👩‍🎤 Make your serverless design system
+      <a style={{ textDecoration: "underline", margin: "0px 10px" }}>
+        Read The Case Study
+      </a>
+    </TopBar>
+    <MediaQuery query="(min-width:997px)">
+      <DesktopNav />
       <PageNav />
       <Hero />
       <BrandContainer brands={BRANDS} />
       <WorkflowExample />
-      <QuoteContainer />
+      <TestExample />
+      <DocumentExample />
+      <QuoteContainer identity="quote" />
+      <CollaborateExample />
+      <ResourceContainer />
       <CtaContainer>
         <h1>Just push and code</h1>
       </CtaContainer>
-    </div>
+    </MediaQuery>
+    <MediaQuery query="(max-width: 996px)">
+      <MobileNav />
+      <PageNav />
+      <Hero />
+      <BrandContainer brands={BRANDS} />
+      <WorkflowExample />
+      <TestExample />
+      <DocumentExample />
+      <QuoteContainer identity="quote" />
+      <CollaborateExample />
+      <ResourceContainer />
+      <CtaContainer>
+        <h1>Just push and code</h1>
+      </CtaContainer>
+    </MediaQuery>
 
     <style jsx>
       {`
@@ -70,6 +96,34 @@ const Home = () => (
         }
         :global(li) {
           list-style: none;
+        }
+        :global(p) {
+          line-height: 1.5;
+          font-size: 14px;
+        }
+
+        :global(.message-enter) {
+          opacity: 0.01;
+          transform: translateY(50%);
+        }
+        :global(.message-enter-active) {
+          opacity: 1;
+          transform: translateY(0%);
+          transition: all 300ms ease-out;
+        }
+        :global(.message-exit) {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+        :global(.message-exit-active) {
+          opacity: 0.01;
+          transform: translateY(50%);
+          transition: all 300ms ease-out;
+        }
+        @media screen and (max-width: 699px) {
+          :global(h1) {
+            text-align: center;
+          }
         }
       `}
     </style>
