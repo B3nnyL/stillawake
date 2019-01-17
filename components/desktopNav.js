@@ -216,28 +216,6 @@ export default class DesktopNav extends React.Component {
               flex-flow: row wrap;
               justify-content: space-around;
             }
-
-            .cross {
-              position: absolute;
-              top: 13px;
-              right: 20px;
-              width: 15px;
-              height: 15px;
-              z-index: 1500;
-            }
-
-            .cross--left {
-              border: 1px #fff solid;
-              transform: rotate(45deg);
-              top: -0.5px;
-              position: absolute;
-              width: 12px;
-            }
-            .cross--right {
-              border: 1px #fff solid;
-              width: 12px;
-              transform: rotate(-45deg);
-            }
           `}
         </style>
       </Fragment>

@@ -63,18 +63,7 @@ export default class MobileNav extends Component {
               </ul>
             </div>
           </div>
-
-          <ul
-            className="search container"
-            style={{
-              opacity: this.state.isSearchClicked ? "1" : "0",
-              top: this.state.isSearchClicked ? "0px" : "-999px"
-            }}
-          >
-            <li>
-              <Input placeholder="FEEDBACKS." width={95} />
-            </li>
-          </ul>
+          <SearchRender visible={this.state.isSearchClicked} />
           <NavList
             productContents={PRODUCT_CONTENT.links}
             useCaseContents={USE_CASE_CONTENT.subMenuContent[1].links}
@@ -118,46 +107,14 @@ export default class MobileNav extends Component {
               border-bottom: 1px #eaeaea solid;
               grid-column: 2/3;
               justify-content: center;
-              margin: -27px;
+              margin: -30px auto;
             }
+
             .container h2 {
               margin-bottom: 14px;
             }
             .container li {
               margin: 5px 0;
-            }
-
-            .search {
-              grid-row: 2/3;
-              display: grid;
-              grid-template-columns: 1fr;
-              padding: 24px 0px;
-              align-items: center;
-              opacity: 0;
-              transition: opacity 200ms ease-in;
-              position: absolute;
-              width: 100%;
-            }
-            .cross {
-              position: absolute;
-              top: 15px;
-              right: 20px;
-              width: 15px;
-              height: 15px;
-              z-index: 1500;
-            }
-
-            .cross--left {
-              border: 1px #fff solid;
-              transform: rotate(45deg);
-              top: -0.5px;
-              position: absolute;
-              width: 12px;
-            }
-            .cross--right {
-              border: 1px #fff solid;
-              width: 12px;
-              transform: rotate(-45deg);
             }
           `}
         </style>
@@ -165,6 +122,44 @@ export default class MobileNav extends Component {
     );
   }
 }
+
+const SearchRender = ({ visible }) => (
+  <div
+    className="search-container"
+    style={{
+      opacity: visible ? "1" : "0",
+      top: visible ? "0px" : "-999px"
+    }}
+  >
+    <div className="input container">
+      <Input placeholder="FEEDBACKS." width={95} />
+    </div>
+    <style jsx>{`
+      .search-container {
+        grid-row-start: 2;
+        grid-column: 2/4;
+        transition: opacity 200ms ease-in;
+        display: grid;
+        grid-template-rows: 264px 264px 1fr;
+        position: absolute;
+        width: 100%;
+        background: white;
+        z-index: 2000;
+        max-height: min-content;
+      }
+      .container {
+        padding: 24px 16px;
+        justify-content: center;
+      }
+      .input {
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+      }
+    `}</style>
+  </div>
+);
 
 const NavList = ({ productContents, useCaseContents, visible }) => (
   <div
@@ -221,19 +216,21 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
     <style jsx>
       {`
         .navlist-container {
-          grid-row-start: 2;
+          grid-row-start: 3;
           grid-column: 2/4;
           transition: opacity 200ms ease-in;
           display: grid;
-          grid-template-rows: 264px 264px 1fr;
-          position: absolute;
-          width: 95%;
+          grid-template-rows: 90px 264px 264px 90px 1fr;
+          position: fixed;
+          width: 100%;
+          overflow: hidden;
         }
 
         .container {
           padding: 24px 16px;
           border-bottom: 1px #eaeaea solid;
           justify-content: center;
+          background: #fff;
         }
         .container h2 {
           margin-bottom: 14px;
@@ -243,26 +240,26 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
           margin: 5px 0;
         }
         .product {
-          grid-row: 1/2;
+          grid-row: 2/3;
           display: flex;
           flex-direction: column;
           margin-top: 30px;
         }
 
         .use {
-          grid-row: 2/3;
+          grid-row: 3/4;
           display: flex;
           flex-direction: column;
         }
         .pricing {
-          grid-row: 3/4;
+          grid-row: 4/5;
           justify-content: space-around;
         }
         .pricing h2 {
           color: #000;
         }
         .cta {
-          grid-row: 4 / span;
+          grid-row: 5 / 6;
           display: flex;
           flex-direction: row;
           align-items: center;
