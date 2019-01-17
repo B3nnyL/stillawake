@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import withPure from "./hoc/withPure";
 import Badge from "./badge";
-import { BLACK_COLOR, BLACK_COLOR_A2 } from "./utils/tokens";
+import { BLACK_COLOR, BLACK_COLOR_A2, BLUE_COLOR } from "./utils/tokens";
 
 const NavLink = withPure(
   ({ children, href, className, up, prefetch, badge, ...props }) => {
@@ -44,6 +44,10 @@ const NavLink = withPure(
             a.with-line:hover {
               color: ${BLACK_COLOR_A2};
               text-decoration: underline;
+            }
+
+            .blue {
+              color: ${BLUE_COLOR};
             }
 
             @media (max-width: 997px) {
