@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import PropTypes from "prop-types";
 
 import withPure from "./hoc/withPure";
@@ -18,7 +17,7 @@ const NavLink = withPure(
           style={{ textTransform: up ? "uppercase" : "capitalize" }}
           {...props}
         >
-          <a className={classNames(className)}>
+          <a className={className}>
             {children}
             {badge && <Badge>{badge}</Badge>}
           </a>
