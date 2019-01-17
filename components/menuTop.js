@@ -9,9 +9,9 @@ const MenuTop = withPure(({ content }) => {
     <div className={menuPos}>
       <h3>{headerText}</h3>
       <ul>
-        {links.map(({ href, label, badge }) => (
+        {links.map(({ href, label, badge, alias }) => (
           <li key={label}>
-            <NavLink href={href} badge={badge}>
+            <NavLink href={href} badge={badge} alias={alias}>
               {label}
             </NavLink>
           </li>
