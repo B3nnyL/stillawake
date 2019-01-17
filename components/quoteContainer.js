@@ -29,7 +29,7 @@ class QuoteContainer extends PureComponent {
     return (
       <section id={identity} ref={this.myRef} onScroll={this.handleScroll}>
         <QuoteContainerRender
-          partyTime={this.state.posY > 300 ? false : true}
+          partyTime={this.state.posY > 400 ? false : true}
         />
       </section>
     );
