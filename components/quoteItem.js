@@ -1,16 +1,33 @@
 import PropTypes from "prop-types";
+import { CSSTransition } from "react-transition-group";
 
 import withPure from "./hoc/withPure";
+import Logo from "./logo";
 
-const QuoteItem = withPure(({ quote }) => {
+const QuoteItem = withPure(({ quote, partyTime }) => {
   const { text, author, title } = quote;
   const quoteBlock = (
     <div className="quote">
-      <p>{text}</p>
-      <div className="author">
-        <h4>{author}</h4>
-        <span>{title}</span>
-      </div>
+      <CSSTransition
+        in={partyTime}
+        timeout={300}
+        classNames="message"
+        unmountOnExit
+      >
+        <p>{text}</p>
+      </CSSTransition>
+      <CSSTransition
+        in={partyTime}
+        timeout={400}
+        classNames="message"
+        unmountOnExit
+      >
+        <div className="author">
+          <Logo size={20} />
+          <h4>{author}</h4>
+          <span>{title}</span>
+        </div>
+      </CSSTransition>
       <style jsx>{`
         .quote {
           width: 900px;
@@ -43,10 +60,11 @@ const QuoteItem = withPure(({ quote }) => {
           flex-direction: column;
           justify-content: space-even;
         }
+
         h4 {
           font-size: 14px;
           font-weight: 500;
-          margin-bottom: 4px;
+          margin: 4px auto;
         }
         .author--business {
           font-size: 14px;
