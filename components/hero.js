@@ -40,6 +40,17 @@ const Hero = withPure(
             .hero__container {
               grid-column: 2/3;
               justify-self: center;
+              opacity: 0;
+              animation-name: example;
+              animation-duration: 800ms;
+              animation-fill-mode: forwards;
+              position: relative;
+            }
+
+            @keyframes example {
+              to {
+                opacity: 1;
+              }
             }
             .hero--title {
               font-size: 46px;
