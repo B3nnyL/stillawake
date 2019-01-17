@@ -11,7 +11,6 @@ const NavLink = withPure(
     const navLink = (
       <div className="navlink-container">
         <Link
-          className={classNames(className)}
           role="link"
           href={href}
           prefetch={prefetch}
@@ -19,7 +18,7 @@ const NavLink = withPure(
           style={{ textTransform: up ? "uppercase" : "capitalize" }}
           {...props}
         >
-          <a>
+          <a className={classNames(className)}>
             {children}
             {badge && <Badge>{badge}</Badge>}
           </a>

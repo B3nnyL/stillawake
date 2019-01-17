@@ -31,7 +31,7 @@ const ResourceItem = withPure(({ resource, partyTime, index }) => {
       <style jsx>{`
         .resource__container {
           width: 262px;
-          height: max-content;
+          height: 180px;
           border-radius: 5px;
           padding: 33px 24px;
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
@@ -52,6 +52,7 @@ const ResourceItem = withPure(({ resource, partyTime, index }) => {
         @media screen and (max-width: 996px) {
           .resource__container {
             margin: 25px auto;
+            height: max-content;
           }
         }
       `}</style>

@@ -8,14 +8,14 @@ const RESOURCE_CONTENT = [
   {
     text:
       "Cillum commodo cupidatat nostrud anim excepteur consequat nulla anim.",
-    title: "How to start a serverless design system",
-    href: "https://www.google.com"
+    title: "Projects on Now ",
+    href: "https://zeit.co/blog/projects"
   },
   {
     text:
       "Cillum commodo cupidatat nostrud anim excepteur consequat nulla anim.",
-    title: "How to start a serverless design system",
-    href: "https://www.google.com"
+    title: "Serverless Chrome via Puppeteer ",
+    href: "https://zeit.co/blog/serverless-chrome"
   }
 ];
 
