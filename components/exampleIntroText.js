@@ -1,19 +1,48 @@
 import PropTypes from "prop-types";
+import { CSSTransition } from "react-transition-group";
 
 import withPure from "./hoc/withPure";
 import NavLink from "./navLink";
 
-const ExampleIntroText = withPure(({ content }) => {
+const ExampleIntroText = withPure(({ content, partyTime }) => {
   const { title, description, link } = content;
   return (
     <div className="example-text__container">
-      <h2 className="example-text--title">{title}</h2>
-      <p className="example-text--desc">{description}</p>
-      <div className="example-text--link">
-        <NavLink className="no-width-lmt link" href={link.href}>
-          {link.text}
-        </NavLink>
-      </div>
+      <CSSTransition
+        in={partyTime}
+        timeout={300}
+        classNames="message"
+        unmountOnExit
+      >
+        <h2 className="example-text--title">{title}</h2>
+      </CSSTransition>
+      <CSSTransition
+        in={partyTime}
+        timeout={400}
+        classNames="message"
+        unmountOnExit
+      >
+        <p className="example-text--desc">{description}</p>
+      </CSSTransition>
+      <CSSTransition
+        in={partyTime}
+        timeout={500}
+        classNames="message"
+        unmountOnExit
+      >
+        <div className="link-group">
+          <div className="example-text--link">
+            <NavLink className="no-width-lmt link blue" href={link.href}>
+              Read case study
+            </NavLink>
+          </div>
+          <div className="example-text--link">
+            <NavLink className="no-width-lmt link" href={link.href}>
+              Read Docs
+            </NavLink>
+          </div>
+        </div>
+      </CSSTransition>
       <style jsx>
         {`
           .example-text__container {
@@ -23,14 +52,18 @@ const ExampleIntroText = withPure(({ content }) => {
           }
           .example-text--title {
             font-size: 28px;
-            font-weight: bold;
+            font-weight: 500;
+            opacity: 1;
+            text-transform: capitalize;
           }
           .example-text--desc {
-            padding: 31px 0 19px 0;
+            padding: 15px 0 19px 0;
           }
-
+          .link-group {
+            display: flex;
+          }
           .example-text--link {
-            padding: 12px 0px;
+            padding: 12px 12px 12px 0px;
           }
         `}
       </style>
@@ -39,6 +72,7 @@ const ExampleIntroText = withPure(({ content }) => {
 });
 
 ExampleIntroText.propTypes = {
+  partyTime: PropTypes.bool,
   content: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
