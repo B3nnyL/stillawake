@@ -14,8 +14,9 @@ const CtaContainer = withPure(({ children }) => (
       {`
         .cta-container {
           width: 1017px;
-          max-height: 136px;
+          max-height: 500px;
           margin: 20px auto;
+          padding: 46px 0px;
           display: flex;
           justify-content: space-between;
         }
@@ -35,7 +36,7 @@ const CtaContainer = withPure(({ children }) => (
             width: 100vw;
             max-height: 500px;
             margin: 10px auto;
-            padding: 0 10px;
+            padding: 46px 10px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
