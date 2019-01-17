@@ -47,6 +47,17 @@ const BrandContainer = withPure(({ brands }) => {
               flex-wrap: nowrap;
               padding: 0px;
             }
+            .brand__container {
+              max-width: 60px;
+              max-height: 40px;
+              justify-self: center;
+              justify-content: center;
+              opacity: 0;
+              animation-name: example;
+              animation-duration: 800ms;
+              animation-fill-mode: forwards;
+              position: relative;
+            }
           }
         `}
       </style>

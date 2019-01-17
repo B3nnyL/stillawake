@@ -2,11 +2,11 @@ import ExampleContainer from "./exampleContainer";
 import withPure from "./hoc/withPure";
 import ExampleIntroText from "./exampleIntroText";
 import { collaborate as content } from "../utils/caseContent";
-import MacContainer from "./macContainer";
-import Sketch from "./illustrations/sketch";
+import ScreenContainer from "./screenContainer";
 
 const CollaborateMac = withPure(({ partyTime }) => (
-  <div className="collaborate">
+  <ScreenContainer partyTime={partyTime}>
+    <div className="collaborate" />
     <style jsx>
       {`
         .collaborate {
@@ -16,9 +16,14 @@ const CollaborateMac = withPure(({ partyTime }) => (
           background-size: cover;
           margin: 20px auto;
         }
+        @media screen and (max-width: 699px) {
+          .collaborate {
+            width: 90vw;
+          }
+        }
       `}
     </style>
-  </div>
+  </ScreenContainer>
 ));
 
 const CollaborateExample = withPure(() => (

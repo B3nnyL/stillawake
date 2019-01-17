@@ -65,6 +65,14 @@ const ExampleIntroText = withPure(({ content, partyTime }) => {
           .example-text--link {
             padding: 12px 12px 12px 0px;
           }
+
+          @media screen and (max-width: 699px) {
+            .example-text__container {
+              width: 90vw;
+              height: 227px;
+              padding: 40px 0px;
+            }
+          }
         `}
       </style>
     </div>

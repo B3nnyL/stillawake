@@ -31,7 +31,7 @@ const CtaContainer = withPure(({ children }) => (
           align-items: center;
         }
 
-        @media screen and (max-width: 699px) {
+        @media (max-width: 699px) {
           .cta-container {
             width: 100vw;
             max-height: 500px;

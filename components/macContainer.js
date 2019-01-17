@@ -59,6 +59,17 @@ const MacContainer = withPure(
           .maximise {
             background-color: #27c93f;
           }
+
+          @media screen and (max-width: 699px) {
+            .mac-container {
+              width: 90vw;
+              height: auto;
+              border-radius: 3px;
+              box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.11);
+              background-color: #ffffff;
+              margin-bottom: 20px;
+            }
+          }
         `}</style>
       </div>
     );

@@ -13,11 +13,7 @@ const FlowContainer = withPure(
         >
           <div
             className="flow-container"
-            style={{
-              height: height,
-              background: background,
-              zIndex: zIndex
-            }}
+            style={{ height: height, background: background, zIndex: zIndex }}
           >
             {children}
           </div>
@@ -26,6 +22,11 @@ const FlowContainer = withPure(
           {`
             .flow-container {
               margin: 20px;
+            }
+            @media screen and (max-width: 699px) {
+              .flow-container {
+                margin: 20px auto;
+              }
             }
           `}
         </style>

@@ -85,7 +85,7 @@ const Hero = withPure(
               .hero--ctas {
                 display: flex;
                 flex-direction: column;
-                padding: 80px 8px 0px;
+                padding: 30px 8px 0px;
                 position: relative;
                 margin: 0 auto;
                 align-items: center;

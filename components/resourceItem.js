@@ -4,8 +4,9 @@ import withPure from "./hoc/withPure";
 import NavLink from "./navLink";
 import Logo from "./logo";
 
-const ResourceItem = withPure(({ resource, partyTime }) => {
+const ResourceItem = withPure(({ resource, partyTime, index }) => {
   const { text, title, href } = resource;
+  const timeout = 300 + index * 50;
   const ResourceBlock = (
     <div className="resource">
       <CSSTransition

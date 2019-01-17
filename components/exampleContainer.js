@@ -58,7 +58,9 @@ const ExampleContainerRender = ({
     <div className="example__container--left">
       <CompLeft content={contentLeft} partyTime={partyTime} />
     </div>
-    <div className="example__container--right">
+    <div
+      className={classNames("example__container--right", { "re-order": order })}
+    >
       <CompRight content={contentRight} partyTime={partyTime} />
     </div>
     <style jsx>
@@ -93,10 +95,11 @@ const ExampleContainerRender = ({
           .example__container--left,
           .example__container--right {
             margin: 0 auto;
+            width: 90vw;
           }
 
-          .example__container--right {
-            order: ${order} ? "-1" : "1";
+          .re-order {
+            order: -1;
           }
         }
       `}

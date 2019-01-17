@@ -56,7 +56,12 @@ class ResourceContainer extends PureComponent {
 const ResourceContainerRender = withPure(({ partyTime }) => (
   <div className="resource-container">
     {RESOURCE_CONTENT.map((content, i) => (
-      <ResourceItem key={i} resource={content} partyTime={partyTime} />
+      <ResourceItem
+        key={i}
+        resource={content}
+        partyTime={partyTime}
+        index={i}
+      />
     ))}
 
     <style jsx>

@@ -1,7 +1,7 @@
 import { CSSTransition } from "react-transition-group";
 import withPure from "./hoc/withPure";
 
-const IconGroupContainer = withPure(
+const ScreenContainer = withPure(
   ({ children, height, background, zIndex, partyTime }) => {
     return (
       <div>
@@ -12,30 +12,14 @@ const IconGroupContainer = withPure(
           unmountOnExit
         >
           <div
-            className="icongroup-container"
             style={{ height: height, background: background, zIndex: zIndex }}
           >
             {children}
           </div>
         </CSSTransition>
-        <style jsx>
-          {`
-            .icongroup-container {
-              position: relative;
-              top: -60px;
-              right: -380px;
-              height: min-content;
-            }
-            @media screen and (max-width: 699px) {
-              .icongroup-container {
-                display: none;
-              }
-            }
-          `}
-        </style>
       </div>
     );
   }
 );
 
-export default IconGroupContainer;
+export default ScreenContainer;
