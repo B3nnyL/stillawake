@@ -1,9 +1,8 @@
 export const content = {
-  title: "Say goodbye to heavylift",
+  title: "Say goodbye to heavylifting",
   description:
-    "Don't worry about project structure, asset storage and infrastructure. \
-    Now builds your design and deploy code from one repository at blazing fast speed \
-    as we only build the parts of your application that have changed. \
+    "Never worry about project's setups and low-level infrastructure. \
+    Build your design and deploy code from one repository at blazing fast speed. \
     No matter how large your repository.",
   link: { text: "Read blog", href: "https://www.zeit.co" }
 };
@@ -11,9 +10,8 @@ export const content = {
 export const test = {
   title: "Test design visually",
   description:
-    "Now renders the code, styling, and assets, \
-allows you take pixel-perfect snapshots with headless browsers.\
- Make you 100% confidence in UI across browsers before you ship it.",
+    "Preview your design and styling by taking pixel-perfect snapshots with headless browsers.\
+ Let you 100% confidence in UI across browsers before you ship it.",
   link: { text: "Read blog", href: "https://www.zeit.co" }
 };
 
@@ -30,7 +28,7 @@ export const document = {
 export const collaborate = {
   title: "Collaborate from one place",
   description:
-    "TWork together with developers\
+    "Work together with developers\
  and managers from the same cloud workplace,\
   always get notified with updates at the same time.\
    No more back-and-forth communication over emails and meetings.",
