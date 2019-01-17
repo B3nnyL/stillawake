@@ -6,7 +6,9 @@ const BrandContainer = withPure(({ brands }) => {
     <div className="brands">
       {brands.map((brand, i) => (
         <li key={i}>
-          <div className="brand__container">{brand}</div>
+          <div className="brand__container" style={{ animationDelay: `400ms` }}>
+            {brand}
+          </div>
         </li>
       ))}
       <style jsx>
@@ -18,7 +20,6 @@ const BrandContainer = withPure(({ brands }) => {
             margin: 20px auto;
             display: flex;
             z-index: 200;
-            padding: 0px 80px;
             justify-content: space-around;
           }
           .brand__container {
@@ -26,6 +27,17 @@ const BrandContainer = withPure(({ brands }) => {
             max-height: 80px;
             justify-self: center;
             justify-content: center;
+            opacity: 0;
+            animation-name: example;
+            animation-duration: 800ms;
+            animation-fill-mode: forwards;
+            position: relative;
+          }
+
+          @keyframes example {
+            to {
+              opacity: 1;
+            }
           }
 
           @media screen and (max-width: 996px) {
