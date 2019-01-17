@@ -44,23 +44,23 @@ export const USE_CASE_CONTENT = {
   title: "use cases",
   subMenuContent: [
     {
-      headerText: "By end users",
+      headerText: "Work with",
       links: [
-        { href: "https://zeit.co/going-to-work-on", label: "To Business" },
-        { href: "https://zeit.co/going-to-work-on", label: "To Customers" },
-        { href: "https://zeit.co/going-to-work-on", label: "To Teams" }
+        { href: "https://zeit.co/and/going-to-work-on", label: "Github" },
+        { href: "https://zeit.co/and/going-to-work-on", label: "Slack" },
+        { href: "https://zeit.co/and/going-to-work-on", label: "Segment" }
       ],
       menuPos: "left"
     },
     {
       headerText: "Now is ready for",
       links: [
-        { href: "https://zeit.co/going-to-work-on", label: "Startups" },
-        { href: "https://zeit.co/going-to-work-on", label: "Enterprises" },
-        { href: "https://zeit.co/going-to-work-on", label: "Agencies" },
-        { href: "https://zeit.co/going-to-work-on", label: "Creatives" },
-        { href: "https://zeit.co/going-to-work-on", label: "Open Sources" },
-        { href: "https://zeit.co/going-to-work-on", label: "Students" }
+        { href: "https://zeit.co/for/going-to-work-on", label: "Startups" },
+        { href: "https://zeit.co/for/going-to-work-on", label: "Enterprises" },
+        { href: "https://zeit.co/for/going-to-work-on", label: "Agencies" },
+        { href: "/design", label: "Designers", alias: "/for/designer" },
+        { href: "https://zeit.co/for/going-to-work-on", label: "Open Sources" },
+        { href: "https://zeit.co/for/going-to-work-on", label: "Students" }
       ],
       menuPos: "right"
     }

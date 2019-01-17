@@ -4,22 +4,26 @@ import PropTypes from "prop-types";
 import withPure from "./hoc/withPure";
 import Badge from "./badge";
 import { BLACK_COLOR, BLACK_COLOR_A2, BLUE_COLOR } from "./utils/tokens";
+import Link from "next/link";
 
 const NavLink = withPure(
-  ({ children, href, className, up, prefetch, badge, ...props }) => {
+  ({ children, href, className, up, prefetch, badge, alias, ...props }) => {
     const navLink = (
       <div className="navlink-container">
-        <a
+        <Link
           className={classNames(className)}
           role="link"
           href={href}
           prefetch={prefetch}
+          as={`${alias}`}
           style={{ textTransform: up ? "uppercase" : "capitalize" }}
           {...props}
         >
-          {children}
-          {badge && <Badge>{badge}</Badge>}
-        </a>
+          <a>
+            {children}
+            {badge && <Badge>{badge}</Badge>}
+          </a>
+        </Link>
         <style jsx>
           {`
             a {
