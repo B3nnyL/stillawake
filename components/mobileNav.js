@@ -34,14 +34,10 @@ export default class MobileNav extends Component {
   render() {
     return (
       <Fragment>
-        {/* <div>
-          <TopBar visible={this.state.isTopbarVisible}> Yo</TopBar>
-          <div className="cross" onClick={this.handleTopBarVisible}>
-            <div className="cross--left" />
-            <div className="cross--right" />
-          </div>
-        </div> */}
-        <nav style={{ height: this.state.isToggleClicked ? "100vh" : "100px" }}>
+        <div
+          className="mobile-nav"
+          style={{ height: this.state.isToggleClicked ? "100vh" : "100px" }}
+        >
           <div className="top container">
             <div className="logo">
               <NavLink href="#">
@@ -84,10 +80,10 @@ export default class MobileNav extends Component {
             useCaseContents={USE_CASE_CONTENT.subMenuContent[1].links}
             visible={this.state.isToggleClicked}
           />
-        </nav>
+        </div>
         <style jsx>
           {`
-            nav {
+            .mobile-nav {
               width: 100vw;
               height: auto;
               display: grid;
@@ -118,11 +114,11 @@ export default class MobileNav extends Component {
               margin-left: 10px;
             }
             .container {
-              padding: 24px 16px;
+              padding: 51px 16px 24px 16px;
               border-bottom: 1px #eaeaea solid;
               grid-column: 2/3;
               justify-content: center;
-              margin-top: 27px;
+              margin: -27px;
             }
             .container h2 {
               margin-bottom: 14px;
@@ -279,6 +275,5 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
 
 NavList.propTypes = {
   productContents: PropTypes.array,
-  useCaseContents: PropTypes.array,
-  visible: PropTypes.bool
+  useCaseContents: PropTypes.array
 };

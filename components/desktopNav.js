@@ -71,11 +71,9 @@ export default class DesktopNav extends React.Component {
   render() {
     return (
       <Fragment>
-        <nav>
+        <div className="try-fix">
           <div className="logo-container">
-            <Link prefetch href="/">
-              <Logo white size={35} />
-            </Link>
+            <Logo white size={20} />
           </div>
           <ul className="start">
             <li
@@ -168,26 +166,22 @@ export default class DesktopNav extends React.Component {
             </li>
           </ul>
           <ul className="flex">
-            <li>
-              <NavLink href="https://spectrum.chat/zeit" up>
-                Chat
-              </NavLink>
-              <NavLink href="https://spectrum.chat/zeit">
-                <Badge>2</Badge>
-              </NavLink>
-            </li>
+            <NavLink href="https://spectrum.chat/zeit" up>
+              Chat
+            </NavLink>
+            <NavLink href="https://spectrum.chat/zeit">
+              <Badge>2</Badge>
+            </NavLink>
           </ul>
           <ul className="end">
-            <li>
-              <NavLink href="https://zeit.co/login" up>
-                Login
-              </NavLink>
-            </li>
+            <NavLink href="https://zeit.co/login" up>
+              Login
+            </NavLink>
           </ul>
-        </nav>
+        </div>
         <style jsx>
           {`
-            nav {
+            .try-fix {
               text-align: center;
               margin-top: 30px;
               width: 1018px;
