@@ -78,9 +78,10 @@ class TopBar extends PureComponent {
                 opacity: 1;
                 transition: opacity 200ms ease-in-out;
                 z-index: 2000;
+                height: max-content;
               }
               .bar__content {
-                max-width: 80px;
+                max-width: 90vw;
               }
             }
           `}

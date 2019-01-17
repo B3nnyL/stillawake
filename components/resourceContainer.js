@@ -30,7 +30,7 @@ class ResourceContainer extends PureComponent {
     return (
       <section id={identity} ref={this.myRef} onScroll={this.handleScroll}>
         <CSSTransition
-          in={this.state.posY > 400 ? false : true}
+          in={this.state.posY > 500 ? false : true}
           timeout={300}
           classNames="message"
           unmountOnExit
@@ -38,7 +38,7 @@ class ResourceContainer extends PureComponent {
           <h2>Resource and Integration</h2>
         </CSSTransition>
         <ResourceContainerRender
-          partyTime={this.state.posY > 400 ? false : true}
+          partyTime={this.state.posY > 500 ? false : true}
         />
         <style jsx>
           {`

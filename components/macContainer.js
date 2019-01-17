@@ -62,8 +62,9 @@ const MacContainer = withPure(
 
           @media screen and (max-width: 699px) {
             .mac-container {
-              width: 90vw;
-              height: auto;
+              width: 80vw;
+              height: max-content;
+              margin: 0 auto;
               border-radius: 3px;
               box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.11);
               background-color: #ffffff;

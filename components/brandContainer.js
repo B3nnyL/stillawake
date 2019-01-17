@@ -42,7 +42,7 @@ const BrandContainer = withPure(({ brands }) => {
 
           @media screen and (max-width: 996px) {
             .brands {
-              width: 100vw;
+              width: 90vw;
               margin: 10px auto;
               flex-wrap: nowrap;
               padding: 0px;
@@ -50,8 +50,7 @@ const BrandContainer = withPure(({ brands }) => {
             .brand__container {
               max-width: 60px;
               max-height: 40px;
-              justify-self: center;
-              justify-content: center;
+              justify-content: space-evenly;
               opacity: 0;
               animation-name: example;
               animation-duration: 800ms;
