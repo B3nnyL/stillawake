@@ -7,7 +7,6 @@ import Input from "./input";
 import { PRODUCT_CONTENT, USE_CASE_CONTENT } from "../utils/navContent";
 import SearchIcon from "../utils/searchIcon";
 import NavIcon from "../utils/navIcon";
-import TopBar from "./topbar";
 
 export default class MobileNav extends Component {
   constructor(props) {
@@ -48,7 +47,9 @@ export default class MobileNav extends Component {
             <div className="tool">
               <ul>
                 <li>
-                  <NavLink up>login</NavLink>
+                  <NavLink up href="/">
+                    login
+                  </NavLink>
                 </li>
                 <li onClick={this.onSearchClick} className="search-btn">
                   <a>
@@ -107,7 +108,7 @@ export default class MobileNav extends Component {
               border-bottom: 1px #eaeaea solid;
               grid-column: 2/3;
               justify-content: center;
-              margin: -30px auto;
+              margin: -40px auto;
             }
 
             .container h2 {
@@ -178,9 +179,9 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
     </ul>
     <ul className="use container">
       <h2>Use cases</h2>
-      {useCaseContents.map(({ href, label, badge }) => (
+      {useCaseContents.map(({ href, label, badge, alias }) => (
         <li key={label}>
-          <NavLink href={href} badge={badge}>
+          <NavLink href={href} badge={badge} alias={alias}>
             {label}
           </NavLink>
         </li>
