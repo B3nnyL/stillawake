@@ -2,11 +2,11 @@ import Proptypes from "prop-types";
 import withPure from "./hoc/withPure";
 import Button from "./button";
 
-const PageNav = withPure(({ title = "page" }) => {
+const PageNav = withPure(({ title }) => {
   return (
     <div className="nav">
       <div className="nav__title">
-        <h2>{title}</h2>
+        <h2>{title || "page"}</h2>
       </div>
       <div className="nav__items">
         <ul>

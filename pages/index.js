@@ -2,18 +2,8 @@ import React from "react";
 import DesktopNav from "../components/desktopNav";
 import MobileNav from "../components/mobileNav";
 import PageNav from "../components/pageNav";
-import Hero from "../components/hero";
-import BrandContainer from "../components/brandContainer";
-import WorkflowExample from "../components/workflowExample";
-import TestExample from "../components/testExample";
-import QuoteContainer from "../components/quoteContainer";
-import CtaContainer from "../components/ctaContainer";
-import { BRANDS } from "../utils/brands";
 import MediaQuery from "react-responsive";
-import DocumentExample from "../components/documentExample";
-import CollaborateExample from "../components/collaborateExample";
 import TopBar from "../components/topbar";
-import ResourceContainer from "../components/resourceContainer";
 import Head from "../components/head";
 
 const Home = () => (
@@ -42,6 +32,7 @@ const Home = () => (
             Helvetica, sans-serif;
           font-size: 14px;
           color: #444;
+          overflow-x: hidden;
         }
         :global(*) {
           margin: 0;
@@ -99,11 +90,17 @@ const Home = () => (
           transition: all 300ms ease-out;
         }
         @media screen and (max-width: 699px) {
+          :global(*) {
+            overflow-x: hidden;
+          }
           :global(h1) {
             text-align: center;
           }
           :global(p) {
             font-size: 16px;
+          }
+          :global(body) {
+            scroll-behavior: smooth;
           }
         }
       `}
