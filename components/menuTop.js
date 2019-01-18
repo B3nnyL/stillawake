@@ -11,6 +11,7 @@ const MenuTop = withPure(({ content }) => {
       <ul>
         {links.map(({ href, label, badge, alias }) => (
           <li key={label}>
+            {console.log(`${href} - ${label} - ${alias}`)}
             <NavLink href={href} badge={badge} alias={alias}>
               {label}
             </NavLink>

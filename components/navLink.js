@@ -9,15 +9,11 @@ const NavLink = withPure(
   ({ children, href, className, up, prefetch, badge, alias, ...props }) => {
     const navLink = (
       <div className="navlink-container">
-        <Link
-          role="link"
-          href={href}
-          prefetch={prefetch}
-          as={`${alias}`}
-          style={{ textTransform: up ? "uppercase" : "capitalize" }}
-          {...props}
-        >
-          <a className={className}>
+        <Link href={href} prefetch={prefetch} as={alias} {...props}>
+          <a
+            className={className}
+            style={{ textTransform: up ? "uppercase" : "capitalize" }}
+          >
             {children}
             {badge && <Badge>{badge}</Badge>}
           </a>
@@ -72,6 +68,7 @@ NavLink.propTypes = {
     PropTypes.any
   ]),
   href: PropTypes.string,
+  alias: PropTypes.string,
   className: PropTypes.string,
   up: PropTypes.bool,
   prefetch: PropTypes.bool,
