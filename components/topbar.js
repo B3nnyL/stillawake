@@ -91,8 +91,4 @@ class TopBar extends PureComponent {
   }
 }
 
-TopBar.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
-};
-
 export default TopBar;
