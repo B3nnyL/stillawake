@@ -53,6 +53,8 @@ const ResourceItem = withPure(({ resource, partyTime, index }) => {
           .resource__container {
             margin: 25px auto;
             height: max-content;
+            max-width: 300px;
+            width: 70vw;
           }
         }
       `}</style>
