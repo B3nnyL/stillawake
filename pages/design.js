@@ -42,7 +42,7 @@ const Design = () => (
     </MediaQuery>
     <MediaQuery query="(max-width: 996px)">
       <MobileNav />
-      <PageNav />
+      <PageNav title="Designer" />
       <Hero />
       <BrandContainer brands={BRANDS} />
       <WorkflowExample />
