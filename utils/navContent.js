@@ -58,7 +58,7 @@ export const USE_CASE_CONTENT = {
         { href: "https://zeit.co/for/going-to-work-on", label: "Startups" },
         { href: "https://zeit.co/for/going-to-work-on", label: "Enterprises" },
         { href: "https://zeit.co/for/going-to-work-on", label: "Agencies" },
-        { href: "/design", label: "Designers", alias: "/for/designer" },
+        { href: "/for/designers", label: "Designers" },
         { href: "https://zeit.co/for/going-to-work-on", label: "Open Sources" },
         { href: "https://zeit.co/for/going-to-work-on", label: "Students" }
       ],

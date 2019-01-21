@@ -6,10 +6,10 @@ import { BLACK_COLOR, BLACK_COLOR_A2, BLUE_COLOR } from "./utils/tokens";
 import Link from "next/link";
 
 const NavLink = withPure(
-  ({ children, href, className, up, prefetch, badge, alias, ...props }) => {
+  ({ children, href, className, up, prefetch, badge, ...props }) => {
     const navLink = (
       <div className="navlink-container">
-        <Link href={href} prefetch={prefetch} as={alias} {...props}>
+        <Link href={href} prefetch={prefetch} {...props}>
           <a
             className={className}
             style={{ textTransform: up ? "uppercase" : "capitalize" }}
@@ -68,7 +68,6 @@ NavLink.propTypes = {
     PropTypes.any
   ]),
   href: PropTypes.string,
-  alias: PropTypes.string,
   className: PropTypes.string,
   up: PropTypes.bool,
   prefetch: PropTypes.bool,
