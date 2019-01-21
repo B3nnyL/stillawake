@@ -26,7 +26,7 @@ const Design = () => (
       </a>
     </TopBar>
     <MediaQuery query="(min-width:997px)">
-      <DesktopNav />
+      {/* <DesktopNav /> */}
       <PageNav title="Designer" />
       <Hero />
       <BrandContainer brands={BRANDS} />
@@ -41,7 +41,7 @@ const Design = () => (
       </CtaContainer>
     </MediaQuery>
     <MediaQuery query="(max-width: 996px)">
-      <MobileNav />
+      {/* <MobileNav /> */}
       <PageNav title="Designer" />
       <Hero />
       <BrandContainer brands={BRANDS} />
@@ -102,23 +102,19 @@ const Design = () => (
           font-size: 14px;
         }
 
-        :global(.message-enter) {
-          opacity: 0.01;
-          transform: translateY(50%);
+        :global(.content-enter) {
+          opacity: 0;
         }
-        :global(.message-enter-active) {
+        :global(.content-enter-active) {
           opacity: 1;
-          transform: translateY(0%);
-          transition: all 300ms ease-out;
+          transition: all 500ms ease-in-out;
         }
-        :global(.message-exit) {
-          opacity: 1;
-          transform: translateY(0%);
+        :global(.content-exit) {
+          opacity: 0;
         }
-        :global(.message-exit-active) {
+        :global(.content-exit-active) {
           opacity: 0.01;
-          transform: translateY(50%);
-          transition: all 300ms ease-out;
+          transition: all 500ms ease-out;
         }
         @media screen and (max-width: 699px) {
           :global(h1) {

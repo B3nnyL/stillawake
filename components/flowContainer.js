@@ -7,7 +7,7 @@ const FlowContainer = withPure(
       <div>
         <CSSTransition
           in={partyTime}
-          classNames="message"
+          classNames="content"
           timeout={300}
           unmountOnExit
         >

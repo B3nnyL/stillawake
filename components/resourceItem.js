@@ -12,7 +12,7 @@ const ResourceItem = withPure(({ resource, partyTime, index }) => {
       <CSSTransition
         in={partyTime}
         timeout={300}
-        classNames="message"
+        classNames="content"
         unmountOnExit
       >
         <div className="resource__container">

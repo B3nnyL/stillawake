@@ -11,7 +11,7 @@ const ExampleIntroText = withPure(({ content, partyTime }) => {
       <CSSTransition
         in={partyTime}
         timeout={300}
-        classNames="message"
+        classNames="content"
         unmountOnExit
       >
         <h2 className="example-text--title">{title}</h2>
@@ -19,7 +19,7 @@ const ExampleIntroText = withPure(({ content, partyTime }) => {
       <CSSTransition
         in={partyTime}
         timeout={400}
-        classNames="message"
+        classNames="content"
         unmountOnExit
       >
         <p className="example-text--desc">{description}</p>
@@ -27,7 +27,7 @@ const ExampleIntroText = withPure(({ content, partyTime }) => {
       <CSSTransition
         in={partyTime}
         timeout={500}
-        classNames="message"
+        classNames="content"
         unmountOnExit
       >
         <div className="link-group">

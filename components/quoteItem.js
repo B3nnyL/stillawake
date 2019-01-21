@@ -11,7 +11,7 @@ const QuoteItem = withPure(({ quote, partyTime }) => {
       <CSSTransition
         in={partyTime}
         timeout={300}
-        classNames="message"
+        classNames="content"
         unmountOnExit
       >
         <p>{text}</p>
@@ -19,7 +19,7 @@ const QuoteItem = withPure(({ quote, partyTime }) => {
       <CSSTransition
         in={partyTime}
         timeout={400}
-        classNames="message"
+        classNames="content"
         unmountOnExit
       >
         <div className="author">

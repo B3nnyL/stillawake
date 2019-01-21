@@ -32,7 +32,7 @@ class ResourceContainer extends PureComponent {
         <CSSTransition
           in={this.state.posY > 500 ? false : true}
           timeout={300}
-          classNames="message"
+          classNames="content"
           unmountOnExit
         >
           <h2>Resource and Integration</h2>

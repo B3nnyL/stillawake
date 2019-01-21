@@ -7,7 +7,7 @@ const MobileContainer = withPure(
       <div>
         <CSSTransition
           in={partyTime}
-          classNames="message"
+          classNames="content"
           timeout={500}
           unmountOnExit
         >
