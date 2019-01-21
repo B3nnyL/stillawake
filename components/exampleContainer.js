@@ -34,7 +34,7 @@ export default class ExampleContainer extends PureComponent {
     return (
       <section id={identity} ref={this.myRef} onScroll={this.handleScroll}>
         <ExampleContainerRender
-          partyTime={this.state.posY > 550 ? false : true}
+          partyTime={this.state.posY > 650 ? false : true}
           CompLeft={CompLeft}
           CompRight={CompRight}
           contentLeft={contentLeft}
