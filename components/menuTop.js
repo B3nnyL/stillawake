@@ -9,10 +9,10 @@ const MenuTop = withPure(({ content }) => {
     <div className={menuPos}>
       <h3>{headerText}</h3>
       <ul>
-        {links.map(({ href, label, badge, alias }) => (
+        {links.map(({ href, label, badge }) => (
           <li key={label}>
-            {console.log(`${href} - ${label} - ${alias}`)}
-            <NavLink href={href} badge={badge} alias={alias}>
+            {console.log(`${href} - ${label}`)}
+            <NavLink href={href} badge={badge}>
               {label}
             </NavLink>
           </li>
