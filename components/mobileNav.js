@@ -179,9 +179,9 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
     </ul>
     <ul className="use container">
       <h2>Use cases</h2>
-      {useCaseContents.map(({ href, label, badge, alias }) => (
+      {useCaseContents.map(({ href, label, badge }) => (
         <li key={label}>
-          <NavLink href={href} badge={badge} alias={alias}>
+          <NavLink href={href} badge={badge}>
             {label}
           </NavLink>
         </li>
