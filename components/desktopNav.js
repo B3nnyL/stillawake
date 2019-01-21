@@ -10,7 +10,6 @@ import Input from "./input";
 import Badge from "./badge";
 import ProductItem from "./productItem";
 import ProductNav from "./productNavContainer";
-import TopBar from "./topbar";
 import {
   USE_CASE_CONTENT,
   DEVELOPERS_CONTENT,
