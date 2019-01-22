@@ -1,11 +1,10 @@
-import React, { PureComponent, createRef } from "react";
+import React, { PureComponent } from "react";
 import { findDOMNode } from "react-dom";
 
 const WithScroll = Comp => {
   return class WithScroll extends PureComponent {
     constructor(props) {
       super(props);
-      this.myRef = createRef();
       this.state = { posY: 0 };
     }
     componentDidMount() {

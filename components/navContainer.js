@@ -1,7 +1,6 @@
 import classNames from "classnames";
 
 import React, { PureComponent, createRef } from "react";
-import TopBar from "./topbar";
 import PageNav from "./pageNav";
 import DesignAnchorMenu from "./designAnchorMenu";
 

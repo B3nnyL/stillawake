@@ -4,55 +4,31 @@ import React, { PureComponent, createRef } from "react";
 import ResourceItem from "./resourceItem";
 import withPure from "./hoc/withPure";
 import RESOURCE_CONTENT from "../utils/resourceContent";
+import withScroll from "./hoc/withScroll";
 
-class ResourceContainer extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.myRef = createRef();
-    this.state = { posY: 0 };
-  }
-  componentDidMount() {
-    window.scrollTo(0, 0);
-    window.addEventListener("scroll", this.handleScroll);
-  }
+const ResourceContainer = withScroll(({ scrollPos }) => (
+  <section id="resources">
+    <CSSTransition
+      in={scrollPos > 500 ? false : true}
+      timeout={300}
+      classNames="content"
+      unmountOnExit
+    >
+      <h2>Resource and Integration</h2>
+    </CSSTransition>
+    <ResourceContainerRender partyTime={scrollPos > 500 ? false : true} />
+    <style jsx>
+      {`
+        h2 {
+          text-align: center;
+          font-size: 32px;
+          margin: 40px auto;
+        }
+      `}
+    </style>
+  </section>
+));
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  handleScroll = () => {
-    const scroll = this.myRef.current.getBoundingClientRect().y;
-    this.setState({ posY: scroll });
-  };
-
-  render() {
-    const { identity } = this.props;
-    return (
-      <section id="resources" ref={this.myRef} onScroll={this.handleScroll}>
-        <CSSTransition
-          in={this.state.posY > 500 ? false : true}
-          timeout={300}
-          classNames="content"
-          unmountOnExit
-        >
-          <h2>Resource and Integration</h2>
-        </CSSTransition>
-        <ResourceContainerRender
-          partyTime={this.state.posY > 500 ? false : true}
-        />
-        <style jsx>
-          {`
-            h2 {
-              text-align: center;
-              font-size: 32px;
-              margin: 40px auto;
-            }
-          `}
-        </style>
-      </section>
-    );
-  }
-}
 const ResourceContainerRender = withPure(({ partyTime }) => (
   <div className="resource-container">
     {RESOURCE_CONTENT.map((content, i) => (

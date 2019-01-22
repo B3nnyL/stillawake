@@ -2,6 +2,10 @@ import { shallow, mount } from "enzyme";
 import toJSON from "enzyme-to-json";
 import NavLink from "../navLink";
 
+import Router from "next/router";
+const mockedRouter = { push: () => {}, prefetch: () => {} };
+Router.router = mockedRouter;
+
 const badgeContent = <span>badge</span>;
 
 describe("<NavLink />", () => {
@@ -29,14 +33,6 @@ describe("<NavLink />", () => {
   it("append href", () => {
     const wrapper = mount(<NavLink href="https://www.zeit.co" />);
     expect(wrapper.props().href).toBe("https://www.zeit.co");
-  });
-
-  it("append prefetch", () => {
-    const wrapper = mount(
-      <NavLink prefetch={true} href="https://www.zeit.co" />
-    );
-    const link = wrapper.find("a");
-    expect(link.props().prefetch).toBeTruthy();
   });
 
   it("append badge", () => {

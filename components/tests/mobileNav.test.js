@@ -25,7 +25,7 @@ describe("<MobileNav/>", () => {
     const a = wrapper.find(".search-btn");
     a.simulate("click");
     expect(wrapper.state("isSearchClicked")).toBeTruthy();
-    expect(wrapper.find(".search").props().style.opacity).toBe("1");
+    expect(wrapper.find(".search-container").props().style.opacity).toBe("1");
     a.simulate("click");
     setTimeout(() => {
       expect(wrapper.state("isSearchClicked")).toBeFalsy();
