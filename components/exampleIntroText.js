@@ -5,7 +5,7 @@ import withPure from "./hoc/withPure";
 import NavLink from "./navLink";
 
 const ExampleIntroText = withPure(({ content, partyTime }) => {
-  const { title, description, link } = content;
+  const { subtitle, title, description, link } = content;
   return (
     <div className="example-text__container">
       <CSSTransition
@@ -14,7 +14,10 @@ const ExampleIntroText = withPure(({ content, partyTime }) => {
         classNames="content"
         unmountOnExit
       >
-        <h2 className="example-text--title">{title}</h2>
+        <div>
+          <h4 className="example-text--subtitle">{subtitle}</h4>
+          <h2 className="example-text--title">{title}</h2>
+        </div>
       </CSSTransition>
       <CSSTransition
         in={partyTime}
@@ -48,13 +51,14 @@ const ExampleIntroText = withPure(({ content, partyTime }) => {
           .example-text__container {
             width: 361px;
             height: 227px;
-            padding: 40px;
+            padding: 20px 40px;
           }
           .example-text--title {
-            font-size: 28px;
-            font-weight: 500;
-            opacity: 1;
             text-transform: capitalize;
+          }
+          .example-text--subtitle {
+            font-size: 12px;
+            color: #444;
           }
           .example-text--desc {
             padding: 15px 0 19px 0;
