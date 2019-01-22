@@ -30,7 +30,7 @@ class TopBar extends PureComponent {
               display: block;
               width: 100vw;
               height: 20px;
-              padding: 5px;
+              padding: 5px 0px;
               background: ${BLACK_COLOR};
               text-align: center;
               font-size: 14px;
@@ -68,20 +68,19 @@ class TopBar extends PureComponent {
             @media screen and (max-width: 699px) {
               .bar {
                 display: block;
-                width: 100vw;
-                padding: 5px;
+                width: auto;
+                padding: 5px 0px;
                 background: ${BLACK_COLOR};
                 text-align: center;
                 font-size: 14px;
                 color: ${WHITE_COLOR};
-                overflow-x: hidden;
                 opacity: 1;
                 transition: opacity 200ms ease-in-out;
                 z-index: 2000;
                 height: max-content;
               }
               .bar__content {
-                max-width: 90vw;
+                max-width: 90%;
               }
             }
           `}
