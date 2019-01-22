@@ -1,4 +1,5 @@
 export const content = {
+  subtitle: "workflow",
   title: "Say goodbye to heavylifting",
   description:
     "Never worry about project's setups and low-level infrastructure. \
@@ -8,6 +9,7 @@ export const content = {
 };
 
 export const test = {
+  subtitle: "Test",
   title: "Test design visually",
   description:
     "Preview your design and styling by taking pixel-perfect snapshots with headless browsers.\
@@ -16,6 +18,7 @@ export const test = {
 };
 
 export const document = {
+  subtitle: "documentation",
   title: "Document flexibly",
   description:
     "Take control of your design document with flexible sever-side solutions,\
@@ -26,6 +29,7 @@ export const document = {
 };
 
 export const collaborate = {
+  subtitle: "collaboration",
   title: "Collaborate from one place",
   description:
     "Work together with developers\
