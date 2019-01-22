@@ -23,7 +23,7 @@ const Hero = withPure(({ title = "Scale design system efficiently" }) => {
       <div className="hero">
         <div className="hero__container">
           <h1 className="hero--title">{title}</h1>
-          <p className="hero--content">{content}</p>
+          <div className="hero--content">{content}</div>
           <div className="hero--ctas">
             <Button size="large">Sign Up Free</Button>
             <Button color="white" size="large">
