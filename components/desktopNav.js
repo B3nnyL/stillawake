@@ -72,7 +72,7 @@ export default class DesktopNav extends React.Component {
       <Fragment>
         <div className="try-fix">
           <div className="logo-container">
-            <Logo white size={20} />
+            <Logo white size={35} />
           </div>
           <ul className="start">
             <li
@@ -113,11 +113,7 @@ export default class DesktopNav extends React.Component {
                 left="0px"
               />
             </li>
-            <li>
-              <NavLink href="https://zeit.co/pricing" up>
-                Pricing
-              </NavLink>
-            </li>
+
             <li
               onMouseEnter={this.handleDevEnter}
               onMouseLeave={this.handleDevLeave}
@@ -157,6 +153,11 @@ export default class DesktopNav extends React.Component {
                 top="20px"
                 left="-250px"
               />
+            </li>
+            <li>
+              <NavLink href="https://zeit.co/pricing" up>
+                Pricing
+              </NavLink>
             </li>
           </ul>
           <ul className="end">
@@ -207,7 +208,7 @@ export default class DesktopNav extends React.Component {
             }
             li {
               display: flex;
-              padding: 6px 8px 0px 8px;
+              padding: 0px 8px;
               position: relative;
             }
             .flex {
