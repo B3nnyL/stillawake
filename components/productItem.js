@@ -10,7 +10,7 @@ const ProductItem = withPure(({ content }) => {
     <Fragment>
       <div key={content.label} className="item-wrapper">
         <div className="item__title">
-          <Logo />
+          <Logo size="15" />
           <NavLink href={content.href} badge={content.badge}>
             <h3>{content.label || "label"}</h3>
           </NavLink>
@@ -30,8 +30,9 @@ const ProductItem = withPure(({ content }) => {
             justify-content: flex-start;
           }
           h3 {
-            font-weight: 600;
+            font-weight: 500;
             color: black;
+            font-size: 16px;
             margin: 0 5px;
             line-height: 1;
           }

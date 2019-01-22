@@ -1,7 +1,7 @@
 import Proptypes from "prop-types";
 import withPure from "./hoc/withPure";
 
-const BrandContainer = withPure(({ brands }) => {
+const Mobile = withPure(({ brands }) => {
   return (
     <div className="brands">
       {brands.map((brand, i) => (
@@ -15,7 +15,7 @@ const BrandContainer = withPure(({ brands }) => {
         {`
           .brands {
             text-align: center;
-            max-width: 1018px;
+            width: 1018px;
             min-height: 80px;
             margin: 20px auto;
             display: flex;
@@ -48,7 +48,7 @@ const BrandContainer = withPure(({ brands }) => {
               padding: 0px;
             }
             .brand__container {
-              max-width: 100px;
+              max-width: 60px;
               max-height: 40px;
               justify-content: space-evenly;
               opacity: 0;

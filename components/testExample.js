@@ -31,8 +31,10 @@ const TestMac = withPure(({ partyTime }) => (
           position: relative;
           margin: 20px auto;
         }
-        @media screen and (max-width: 699px) {
-          padding-bottom: 40px;
+        @media screen and (max-width: 996px) {
+          .test-illustrations {
+            padding-bottom: 40px;
+          }
         }
       `}
     </style>
@@ -42,7 +44,7 @@ const TestMac = withPure(({ partyTime }) => (
 const TestExample = withPure(() => (
   <div>
     <ExampleContainer
-      idenity="test"
+      identity="test"
       CompLeft={ExampleIntroText}
       CompRight={TestMac}
       contentLeft={content}

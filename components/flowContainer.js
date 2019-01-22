@@ -21,9 +21,10 @@ const FlowContainer = withPure(
         <style jsx>
           {`
             .flow-container {
-              margin: 20px;
+              margin: 20px 0px;
+              text-align: center;
             }
-            @media screen and (max-width: 699px) {
+            @media screen and (max-width: 996px) {
               .flow-container {
                 margin: 20px auto;
               }

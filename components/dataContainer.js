@@ -35,7 +35,7 @@ const DataContainer = withPure(({ data, desc, partyTime }) => (
           text-align: left;
         }
 
-        @media screen and (max-width: 699px) {
+        @media screen and (max-width: 996px) {
           .data-container {
             width: auto;
           }

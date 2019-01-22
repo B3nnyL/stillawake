@@ -13,12 +13,12 @@ const CtaContainer = withPure(({ children }) => (
     <style jsx>
       {`
         .cta-container {
-          width: 1017px;
+          max-width: 1012px;
           max-height: 500px;
           margin: 20px auto;
           padding: 46px 0px;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
         }
         .cta-container__slogan {
           max-width: 300px;
@@ -31,12 +31,12 @@ const CtaContainer = withPure(({ children }) => (
           align-items: center;
         }
 
-        @media (max-width: 699px) {
+        @media (max-width: 996px) {
           .cta-container {
-            width: 100vw;
+            width: 90vw;
             max-height: 500px;
             margin: 10px auto;
-            padding: 46px 10px;
+            padding: 46px 0px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;

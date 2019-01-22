@@ -50,6 +50,7 @@ class TopBar extends PureComponent {
               width: 15px;
               height: 15px;
               z-index: 1500;
+              cursor: pointer;
             }
 
             .cross--left {
@@ -65,7 +66,7 @@ class TopBar extends PureComponent {
               transform: rotate(-45deg);
             }
 
-            @media screen and (max-width: 699px) {
+            @media screen and (max-width: 996px) {
               .bar {
                 display: block;
                 width: auto;

@@ -50,6 +50,11 @@ export default class NavContainer extends PureComponent {
             z-index: 1100;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px 0px;
           }
+          @media screen and (max-width: 996px) {
+            .nav-wrapper {
+              display: none;
+            }
+          }
         `}</style>
       </div>
     );

@@ -28,7 +28,7 @@ class ResourceContainer extends PureComponent {
   render() {
     const { identity } = this.props;
     return (
-      <section id={identity} ref={this.myRef} onScroll={this.handleScroll}>
+      <section id="resources" ref={this.myRef} onScroll={this.handleScroll}>
         <CSSTransition
           in={this.state.posY > 500 ? false : true}
           timeout={300}
@@ -67,7 +67,7 @@ const ResourceContainerRender = withPure(({ partyTime }) => (
     <style jsx>
       {`
         .resource-container {
-          width: 1017px;
+          max-width: 1017px;
           min-height: 256px;
           margin: 20px auto;
           display: flex;

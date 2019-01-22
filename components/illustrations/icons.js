@@ -325,16 +325,16 @@ const icons = () => (
         #docz-icon {
           opacity: 0;
           animation-name: example-2;
-          animation-duration: 1s;
-          animation-delay: 350ms;
+          animation-duration: 500ms;
+          animation-delay: 1.5s;
           animation-fill-mode: forwards;
           position: relative;
         }
 
         #vue-icon {
           opacity: 0;
-          animation-delay: 300ms;
-          animation-duration: 1s;
+          animation-delay: 500ms;
+          animation-duration: 2s;
           animation-fill-mode: forwards;
           animation-name: example-2;
         }
@@ -342,8 +342,8 @@ const icons = () => (
         #gatsby-icon {
           opacity: 0;
           animation-name: example-2;
-          animation-delay: 325ms;
-          animation-duration: 1s;
+          animation-delay: 2.5ms;
+          animation-duration: 500ms;
           animation-fill-mode: forwards;
           position: relative;
         }

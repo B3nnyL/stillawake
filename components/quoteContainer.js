@@ -29,7 +29,7 @@ class QuoteContainer extends PureComponent {
     return (
       <section id={identity} ref={this.myRef} onScroll={this.handleScroll}>
         <QuoteContainerRender
-          partyTime={this.state.posY > 400 ? false : true}
+          partyTime={this.state.posY > 650 ? false : true}
         />
       </section>
     );
@@ -41,7 +41,7 @@ const QuoteContainerRender = withPure(({ partyTime }) => (
     <style jsx>
       {`
         .quote-container {
-          width: 1017px;
+          max-width: 1017px;
           min-height: 250px;
           margin: 20px auto;
         }

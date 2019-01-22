@@ -22,7 +22,7 @@ const MacContainer = withPure(
         </CSSTransition>
         <style jsx>{`
           .mac-container {
-            width: 450px;
+            width: 400px;
             height: auto;
             border-radius: 3px;
             box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.11);
@@ -60,8 +60,9 @@ const MacContainer = withPure(
             background-color: #27c93f;
           }
 
-          @media screen and (max-width: 699px) {
+          @media screen and (max-width: 996px) {
             .mac-container {
+              max-width: 450px;
               width: 80vw;
               height: max-content;
               margin: 0 auto;

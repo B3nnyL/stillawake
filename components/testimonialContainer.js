@@ -36,6 +36,7 @@ design system with helps from now" ||
         .testimonial--brand {
           max-height: 40px;
           margin-bottom: 40px;
+          width: 133px;
         }
         .testimonial--desc {
           font-size: 18px;
@@ -43,7 +44,7 @@ design system with helps from now" ||
           padding-bottom: 18px;
         }
 
-        @media screen and (max-width: 699px) {
+        @media screen and (max-width: 996px) {
           .testimonial-container {
             width: auto;
           }

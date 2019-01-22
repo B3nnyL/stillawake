@@ -23,12 +23,14 @@ const IconGroupContainer = withPure(
             .icongroup-container {
               position: relative;
               top: -60px;
-              right: -380px;
+              left: 320px;
               height: min-content;
             }
-            @media screen and (max-width: 699px) {
+            @media screen and (max-width: 996px) {
               .icongroup-container {
-                display: none;
+                position: relative;
+                top: -60px;
+                left: 65vw;
               }
             }
           `}

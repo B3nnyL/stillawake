@@ -16,9 +16,10 @@ const CollaborateMac = withPure(({ partyTime }) => (
           background-size: cover;
           margin: 20px auto;
         }
-        @media screen and (max-width: 699px) {
+        @media screen and (max-width: 997px) {
           .collaborate {
             width: 90vw;
+            max-width: 450px;
           }
         }
       `}
@@ -29,7 +30,7 @@ const CollaborateMac = withPure(({ partyTime }) => (
 const CollaborateExample = withPure(() => (
   <div>
     <ExampleContainer
-      idenity="Collaborate"
+      identity="collaboration"
       CompLeft={ExampleIntroText}
       CompRight={CollaborateMac}
       contentLeft={content}

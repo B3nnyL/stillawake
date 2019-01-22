@@ -42,7 +42,7 @@ const DocumentMac = withPure(({ partyTime }) => (
 const DocumentExample = withPure(() => (
   <div>
     <ExampleContainer
-      idenity="Document"
+      identity="documentation"
       CompRight={ExampleIntroText}
       CompLeft={DocumentMac}
       contentLeft={content}

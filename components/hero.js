@@ -5,16 +5,21 @@ import Button from "./button";
 const content = (
   <p>
     Empowered by serverless solution, <b>Now</b> makes your design system
-    building process smoother and faster
+    building process smoother and faster.
+    <style jsx>{`
+      p {
+        font-size: 16px;
+      }
+      b {
+        font-weight: 600;
+      }
+    `}</style>
   </p>
 );
 
-const Hero = withPure(
-  ({
-    title = "Scale design system efficiently",
-    content = "Empowered by serverless solution, Now makes your design system building process smoother and faster"
-  }) => {
-    return (
+const Hero = withPure(({ title = "Scale design system efficiently" }) => {
+  return (
+    <section id="hero">
       <div className="hero">
         <div className="hero__container">
           <h1 className="hero--title">{title}</h1>
@@ -30,7 +35,7 @@ const Hero = withPure(
           {`
             .hero {
               text-align: center;
-              width: 1018px;
+              max-width: 1017px;
               min-height: 150px;
               margin: 70px auto;
               display: grid;
@@ -96,9 +101,9 @@ const Hero = withPure(
           `}
         </style>
       </div>
-    );
-  }
-);
+    </section>
+  );
+});
 
 Hero.proptypes = {
   title: Proptypes.string,

@@ -104,20 +104,16 @@ const Design = () => (
 
         :global(.message-enter) {
           opacity: 0.01;
-          transform: translateY(50%);
         }
         :global(.message-enter-active) {
           opacity: 1;
-          transform: translateY(0%);
           transition: all 300ms ease-out;
         }
         :global(.message-exit) {
           opacity: 1;
-          transform: translateY(0%);
         }
         :global(.message-exit-active) {
           opacity: 0.01;
-          transform: translateY(50%);
           transition: all 300ms ease-out;
         }
         @media screen and (max-width: 699px) {

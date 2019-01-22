@@ -6,8 +6,6 @@ const auth0 = (
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>auth0</title>
-    <desc>Created with Sketch.</desc>
     <g id="Page-3" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g
         id="Desktop-HD"

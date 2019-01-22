@@ -28,7 +28,7 @@ const WorkflowMac = ({ partyTime }) => {
 const WorkflowExample = withPure(() => (
   <div>
     <ExampleContainer
-      idenity="workflow"
+      identity="workflow"
       CompLeft={WorkflowMac}
       CompRight={ExampleIntroText}
       contentLeft={content}

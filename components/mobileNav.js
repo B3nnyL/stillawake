@@ -19,8 +19,8 @@ export default class MobileNav extends Component {
   }
   onSearchClick = e => {
     this.state.isSearchClicked
-      ? this.setState({ isSearchClicked: false, isToggleClicked: false })
-      : this.setState({ isSearchClicked: true, isToggleClicked: false });
+      ? this.setState({ isSearchClicked: false })
+      : this.setState({ isSearchClicked: true });
   };
   onToggleClick = e => {
     this.state.isToggleClicked
@@ -35,13 +35,18 @@ export default class MobileNav extends Component {
       <Fragment>
         <div
           className="mobile-nav"
-          style={{ height: this.state.isToggleClicked ? "100vh" : "100px" }}
+          style={{
+            height:
+              this.state.isToggleClicked || this.state.isSearchClicked
+                ? "100vh"
+                : "100px"
+          }}
         >
           <div className="top container">
             <div className="logo">
               <NavLink href="#">
                 <Logo filled white />
-                <h2>Now</h2>
+                <h2 className="logo-text">Now</h2>
               </NavLink>
             </div>
             <div className="tool">
@@ -81,6 +86,10 @@ export default class MobileNav extends Component {
               grid-template-rows: 84px 50px auto;
               overflow-x: hidden;
               position: relative;
+            }
+
+            .logo-text {
+              font-size: 16px;
             }
 
             .top {
@@ -129,34 +138,39 @@ const SearchRender = ({ visible }) => (
     className="search-container"
     style={{
       opacity: visible ? "1" : "0",
-      top: visible ? "0px" : "-999px"
+      top: visible ? "0" : "-999px"
     }}
   >
     <div className="input container">
-      <Input placeholder="FEEDBACKS." width={95} />
+      <Input placeholder="FEEDBACKS.." width={350} />
     </div>
     <style jsx>{`
       .search-container {
-        grid-row-start: 2;
-        grid-column: 2/4;
+        grid-row: 2/3;
+        grid-column: 2/3;
         transition: opacity 200ms ease-in;
         display: grid;
-        grid-template-rows: 264px 264px 1fr;
         position: absolute;
         width: 100%;
         background: white;
         z-index: 2000;
-        max-height: min-content;
+      }
+      .navlist-container {
+        grid-row-start: 2;
+        grid-column: 2/3;
+        transition: opacity 200ms ease-in;
+        display: grid;
+        grid-template-rows: 264px 264px 90px 1fr;
+        position: absolute;
+        width: 100%;
+        overflow-x: hidden;
       }
       .container {
-        padding: 24px 16px;
         justify-content: center;
       }
       .input {
         grid-row: 1/2;
         display: flex;
-        flex-direction: column;
-        margin-top: 30px;
       }
     `}</style>
   </div>
@@ -165,10 +179,10 @@ const SearchRender = ({ visible }) => (
 const NavList = ({ productContents, useCaseContents, visible }) => (
   <div
     className="navlist-container"
-    style={{ opacity: visible ? "1" : "0", top: visible ? "0px" : "-999px" }}
+    style={{ opacity: visible ? "1" : "0", top: visible ? "0" : "-999px" }}
   >
     <ul className="product container">
-      <h2>Products</h2>
+      <h2 className="small">Products</h2>
       {productContents.map(({ href, label, badge }) => (
         <li key={label}>
           <NavLink href={href} badge={badge}>
@@ -178,7 +192,7 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
       ))}
     </ul>
     <ul className="use container">
-      <h2>Use cases</h2>
+      <h2 className="small">Use cases</h2>
       {useCaseContents.map(({ href, label, badge }) => (
         <li key={label}>
           <NavLink href={href} badge={badge}>
@@ -190,7 +204,7 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
     <ul className="pricing container">
       <li>
         <NavLink href="pricing" up>
-          <h2>View Pricing</h2>
+          <h2 className="small">View Pricing</h2>
         </NavLink>
       </li>
     </ul>
@@ -217,14 +231,14 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
     <style jsx>
       {`
         .navlist-container {
-          grid-row-start: 3;
-          grid-column: 2/4;
+          grid-row-start: 2;
+          grid-column: 2/3;
           transition: opacity 200ms ease-in;
           display: grid;
-          grid-template-rows: 90px 264px 264px 90px 1fr;
-          position: fixed;
+          grid-template-rows: 264px 264px 90px 1fr;
+          position: absolute;
           width: 100%;
-          overflow: hidden;
+          overflow-x: hidden;
         }
 
         .container {
@@ -241,30 +255,33 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
           margin: 5px 0;
         }
         .product {
-          grid-row: 2/3;
+          grid-row: 1/2;
           display: flex;
           flex-direction: column;
           margin-top: 30px;
         }
 
         .use {
-          grid-row: 3/4;
+          grid-row: 2/3;
           display: flex;
           flex-direction: column;
         }
         .pricing {
-          grid-row: 4/5;
+          grid-row: 3/4;
           justify-content: space-around;
         }
         .pricing h2 {
           color: #000;
         }
         .cta {
-          grid-row: 5 / 6;
+          grid-row: 4 / 5;
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: space-around;
+        }
+        .small {
+          font-size: 16px;
         }
       `}
     </style>

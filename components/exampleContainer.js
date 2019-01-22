@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import React, { PureComponent, createRef } from "react";
@@ -66,23 +65,21 @@ const ExampleContainerRender = ({
     <style jsx>
       {`
         .example__container {
-          width: 1017px;
+          max-width: 1017px;
           max-height: 400px;
-          margin: 40px auto;
-          padding: 40px 30px;
+          margin: 0px auto;
+          padding: 80px 0px;
           display: flex;
           justify-content: center;
           overflow-y: scroll;
           overflow-x: none;
         }
-        .example__container--left {
-          width: 450px;
-        }
+
         .example__container--right {
-          margin: 0px 50px;
+          margin-left: 50px;
         }
 
-        @media screen and (max-width: 699px) {
+        @media screen and (max-width: 996px) {
           .example__container {
             width: 90vw;
             margin: 20px auto;

@@ -8,13 +8,13 @@ import {
   WHITE_COLOR_A1
 } from "./utils/tokens";
 
-const Input = ({ placeholder = "type something", width = 149 }) => {
+const Input = ({ placeholder = "type something", width }) => {
   const input = (
     <Fragment>
       <input
         type="text"
         placeholder={placeholder}
-        style={{ width: `${width}px` }}
+        style={{ width: `${width || 149}px` }}
       />
       <style jsx>
         {`

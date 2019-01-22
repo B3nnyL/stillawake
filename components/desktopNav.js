@@ -184,11 +184,11 @@ export default class DesktopNav extends React.Component {
             .try-fix {
               text-align: center;
               margin-top: 30px;
-              width: 1018px;
+              max-width: 1018px;
               height: 84px;
               margin: 0px auto;
               display: grid;
-              grid-template-columns: 40px 4fr 100px 100px 50px;
+              grid-template-columns: 40px 3fr 100px 100px 50px;
             }
             .logo-container {
               align-self: center;

@@ -78,7 +78,7 @@ const DataTestimonialContainerRender = ({
           margin: 0px 50px;
         }
 
-        @media screen and (max-width: 699px) {
+        @media screen and (max-width: 996px) {
           .data-testimonial__container {
             width: 90vw;
             margin: 20px auto;

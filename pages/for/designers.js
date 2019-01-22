@@ -9,13 +9,17 @@ import TestExample from "../../components/testExample";
 import QuoteContainer from "../../components/quoteContainer";
 import CtaContainer from "../../components/ctaContainer";
 import { BRANDS } from "../../utils/brands";
+import { BRANDS as MOBILE_BRANDS } from "../../utils/mobileBrands";
 import MediaQuery from "react-responsive";
 import DocumentExample from "../../components/documentExample";
 import CollaborateExample from "../../components/collaborateExample";
 import TopBar from "../../components/topbar";
 import ResourceContainer from "../../components/resourceContainer";
 import Head from "../../components/head";
-
+import Button from "../../components/button";
+import DesignAnchorMenu from "../../components/designAnchorMenu";
+import DataTestimonialContainer from "../../components/dataTestimonialContainer";
+import NavContainer from "../../components/navContainer";
 const Design = () => (
   <div>
     <Head title="For Designer - Now" />
@@ -26,29 +30,32 @@ const Design = () => (
       </a>
     </TopBar>
     <MediaQuery query="(min-width:997px)">
-      {/* <DesktopNav /> */}
-      <PageNav title="Designer" />
+      <DesktopNav />
+      <NavContainer />
       <Hero />
       <BrandContainer brands={BRANDS} />
-      <WorkflowExample />
-      <TestExample />
-      <DocumentExample />
+      <WorkflowExample identity="workflow" />
+      <TestExample identity="test" />
+      <DocumentExample identity="documentation" />
       <QuoteContainer identity="quote" />
-      <CollaborateExample />
+      <DataTestimonialContainer />
+      <CollaborateExample identity="collaboration" />
       <ResourceContainer />
       <CtaContainer>
         <h1>Just push and code</h1>
       </CtaContainer>
     </MediaQuery>
     <MediaQuery query="(max-width: 996px)">
-      {/* <MobileNav /> */}
-      <PageNav title="Designer" />
+      <MobileNav />
+      <NavContainer />
       <Hero />
       <BrandContainer brands={BRANDS} />
       <WorkflowExample />
       <TestExample />
       <DocumentExample />
       <QuoteContainer identity="quote" />
+      <DataTestimonialContainer />
+
       <CollaborateExample />
       <ResourceContainer />
       <CtaContainer>
@@ -74,22 +81,30 @@ const Design = () => (
           vertical-align: baseline;
         }
         :global(h1) {
-          font-weight: 500;
+          font-weight: 600;
           font-size: 42px;
           margin-bottom: 4px;
           color: #000;
         }
         :global(h2) {
-          font-weight: 500;
-          font-size: 16px;
+          font-weight: 600;
+          font-size: 28px;
           margin-bottom: 4px;
           color: #000;
         }
         :global(h3) {
           font-weight: 500;
-          font-size: 15px;
+          font-size: 18px;
           margin-bottom: 4px;
           color: #000;
+        }
+
+        :global(h4) {
+          font-weight: 600;
+          font-size: 14px;
+          margin-bottom: 4px;
+          color: #000;
+          text-transform: uppercase;
         }
         :global(a) {
           cursor: pointer;
@@ -116,7 +131,8 @@ const Design = () => (
           opacity: 0.01;
           transition: all 500ms ease-out;
         }
-        @media screen and (max-width: 699px) {
+
+        @media screen and (max-width: 996px) {
           :global(h1) {
             text-align: center;
           }

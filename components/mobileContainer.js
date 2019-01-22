@@ -34,7 +34,7 @@ const MobileContainer = withPure(
             justify-content: ${horizontal};
             align-items: ${vertical};
           }
-          @media screen and (max-width: 699px) {
+          @media screen and (max-width: 996px) {
             .mobile-container {
               top: 86px;
               right: 50px;

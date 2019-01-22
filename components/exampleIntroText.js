@@ -49,9 +49,9 @@ const ExampleIntroText = withPure(({ content, partyTime }) => {
       <style jsx>
         {`
           .example-text__container {
-            width: 361px;
+            max-width: 440px;
             height: 227px;
-            padding: 20px 40px;
+            padding: 20px 0px 20px 40px;
           }
           .example-text--title {
             text-transform: capitalize;
@@ -62,6 +62,7 @@ const ExampleIntroText = withPure(({ content, partyTime }) => {
           }
           .example-text--desc {
             padding: 15px 0 19px 0;
+            line-height: 24px;
           }
           .link-group {
             display: flex;
@@ -70,8 +71,10 @@ const ExampleIntroText = withPure(({ content, partyTime }) => {
             padding: 12px 12px 12px 0px;
           }
 
-          @media screen and (max-width: 699px) {
+          @media screen and (max-width: 996px) {
             .example-text__container {
+              max-width: 400px;
+              margin: auto;
               width: 90vw;
               height: 227px;
               padding: 40px 0px;
