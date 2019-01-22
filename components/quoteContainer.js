@@ -42,7 +42,7 @@ const QuoteContainerRender = withPure(({ partyTime }) => (
       {`
         .quote-container {
           width: 1017px;
-          min-height: 256px;
+          min-height: 250px;
           margin: 20px auto;
         }
         @media screen and (max-width: 996px) {
