@@ -11,7 +11,7 @@ describe("<ProductItem />", () => {
 
   it("renders logo", () => {
     const wrapper = mount(<ProductItem content={PRODUCT_CONTENT.links[0]} />);
-    expect(wrapper.find("svg").props().height).toBe("20px");
+    expect(wrapper.find("svg").props().height).toBe("15px");
   });
 
   it("renders content", () => {
