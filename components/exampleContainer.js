@@ -71,12 +71,15 @@ const ExampleContainerRender = ({
           margin: 20px auto;
           padding: 40px 30px;
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           overflow-y: scroll;
           overflow-x: none;
         }
         .example__container--left {
           width: 450px;
+        }
+        .example__container--right {
+          margin: 0px 50px;
         }
 
         @media screen and (max-width: 699px) {
