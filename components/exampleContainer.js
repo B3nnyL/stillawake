@@ -68,7 +68,7 @@ const ExampleContainerRender = ({
         .example__container {
           width: 1017px;
           max-height: 400px;
-          margin: 20px auto;
+          margin: 40px auto;
           padding: 40px 30px;
           display: flex;
           justify-content: center;
