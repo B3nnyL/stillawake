@@ -1,49 +1,30 @@
 import classNames from "classnames";
 
-import React, { PureComponent, createRef } from "react";
+import React from "react";
+import withScroll from "./hoc/withScroll";
 
-export default class ExampleContainer extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.myRef = createRef();
-    this.state = { posY: 0 };
-  }
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  handleScroll = () => {
-    const scroll = this.myRef.current.getBoundingClientRect().y;
-    this.setState({ posY: scroll });
-  };
-
-  render() {
-    const {
-      identity,
-      CompLeft,
-      CompRight,
-      contentLeft,
-      contentRight,
-      order
-    } = this.props;
-    return (
-      <section id={identity} ref={this.myRef} onScroll={this.handleScroll}>
-        <ExampleContainerRender
-          partyTime={this.state.posY > 650 ? false : true}
-          CompLeft={CompLeft}
-          CompRight={CompRight}
-          contentLeft={contentLeft}
-          contentRight={contentRight}
-          order={order}
-        />
-      </section>
-    );
-  }
-}
+const ExampleContainer = withScroll(
+  ({
+    scrollPos,
+    identity,
+    CompLeft,
+    CompRight,
+    contentLeft,
+    contentRight,
+    order
+  }) => (
+    <section id={identity}>
+      <ExampleContainerRender
+        partyTime={scrollPos > 650 ? false : true}
+        CompLeft={CompLeft}
+        CompRight={CompRight}
+        contentLeft={contentLeft}
+        contentRight={contentRight}
+        order={order}
+      />
+    </section>
+  )
+);
 
 const ExampleContainerRender = ({
   partyTime,
@@ -106,3 +87,5 @@ const ExampleContainerRender = ({
     </style>
   </div>
 );
+
+export default ExampleContainer;
