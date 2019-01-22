@@ -32,12 +32,13 @@ const QuoteItem = withPure(({ quote, partyTime }) => {
         .quote {
           width: 900px;
           text-align: center;
-          height: auto;
+          height: max-content;
           position: relative;
           margin: 0 auto;
         }
         .quote p {
           font-size: 18px;
+          line-height: 2;
           max-width: 526px;
           margin: 0 auto;
           padding-bottom: 40px;
@@ -47,7 +48,7 @@ const QuoteItem = withPure(({ quote, partyTime }) => {
           content: "“";
           font-size: 108px;
           left: 120px;
-          top: -40px;
+          top: -90px;
           color: #efefef;
           z-index: -10;
           position: absolute;
