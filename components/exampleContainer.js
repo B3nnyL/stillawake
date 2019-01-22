@@ -65,6 +65,7 @@ const ExampleContainerRender = ({
             width: 90vw;
             margin: 20px auto;
             max-height: 1000px;
+            padding: 20px 0px;
             height: auto;
             display: flex;
             flex-direction: column;

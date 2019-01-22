@@ -3,42 +3,22 @@ import DataContainer from "./dataContainer";
 import TestimonialContainer from "./testimonialContainer";
 
 import React, { PureComponent, createRef } from "react";
+import withScroll from "./hoc/withScroll";
 
-export default class DataTestimonialContainer extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.myRef = createRef();
-    this.state = { posY: 0 };
-  }
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  handleScroll = () => {
-    const scroll = this.myRef.current.getBoundingClientRect().y;
-    this.setState({ posY: scroll });
-  };
-
-  render() {
-    const { contentLeft, contentRight, order } = this.props;
-    return (
-      <section id="testimonial" ref={this.myRef} onScroll={this.handleScroll}>
-        <DataTestimonialContainerRender
-          partyTime={this.state.posY > 650 ? false : true}
-          CompLeft={DataContainer}
-          CompRight={TestimonialContainer}
-          contentLeft={contentLeft}
-          contentRight={contentRight}
-          order={order}
-        />
-      </section>
-    );
-  }
-}
+const DataTestimonialContainer = withScroll(
+  ({ scrollPos, contentLeft, contentRight, order }) => (
+    <section id="testimonial">
+      <DataTestimonialContainerRender
+        partyTime={scrollPos > 650 ? false : true}
+        CompLeft={DataContainer}
+        CompRight={TestimonialContainer}
+        contentLeft={contentLeft}
+        contentRight={contentRight}
+        order={order}
+      />
+    </section>
+  )
+);
 
 const DataTestimonialContainerRender = ({
   partyTime,
@@ -98,3 +78,5 @@ const DataTestimonialContainerRender = ({
     </style>
   </div>
 );
+
+export default DataTestimonialContainer;

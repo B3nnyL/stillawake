@@ -3,38 +3,14 @@ import withPure from "./hoc/withPure";
 import { content } from "../utils/quoteContent";
 
 import React, { PureComponent, Fragment, createRef } from "react";
+import withScroll from "./hoc/withScroll";
 
-class QuoteContainer extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.myRef = createRef();
-    this.state = { posY: 0 };
-  }
-  componentDidMount() {
-    // window.scrollTo(0, 0);
-    window.addEventListener("scroll", this.handleScroll);
-  }
+const QuoteContainer = withScroll(({ scrollPos, identity }) => (
+  <section id={identity}>
+    <QuoteContainerRender partyTime={scrollPos > 650 ? false : true} />
+  </section>
+));
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  handleScroll = () => {
-    const scroll = this.myRef.current.getBoundingClientRect().y;
-    this.setState({ posY: scroll });
-  };
-
-  render() {
-    const { identity } = this.props;
-    return (
-      <section id={identity} ref={this.myRef} onScroll={this.handleScroll}>
-        <QuoteContainerRender
-          partyTime={this.state.posY > 650 ? false : true}
-        />
-      </section>
-    );
-  }
-}
 const QuoteContainerRender = withPure(({ partyTime }) => (
   <div className="quote-container">
     <Quote quote={content} partyTime={partyTime} />
