@@ -41,6 +41,12 @@ const DataContainer = withPure(({ data, desc, partyTime }) => (
           }
           .data-container--data {
             width: auto;
+            font-size: 30px;
+          }
+          .data-container--desc {
+            font-weight: 600;
+            text-align: left;
+            font-size: 12px;
           }
         }
       `}

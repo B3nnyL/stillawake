@@ -33,15 +33,7 @@ export default class MobileNav extends Component {
   render() {
     return (
       <Fragment>
-        <div
-          className="mobile-nav"
-          style={{
-            height:
-              this.state.isToggleClicked || this.state.isSearchClicked
-                ? "100vh"
-                : "100px"
-          }}
-        >
+        <div className="mobile-nav">
           <div className="top container">
             <div className="logo">
               <NavLink href="#">
@@ -82,41 +74,49 @@ export default class MobileNav extends Component {
               width: 100vw;
               height: auto;
               display: grid;
-              grid-template-columns: 5vw auto 5vw;
-              grid-template-rows: 84px 50px auto;
-              overflow-x: hidden;
+              grid-template-columns: 10px auto 10px;
+              grid-template-rows: 84px auto;
               position: relative;
             }
 
             .logo-text {
               font-size: 16px;
             }
-
             .top {
               grid-row: 1/2;
               grid-column: 2/3;
-              display: grid;
-              grid-template-columns: 1fr 200px;
+              display: flex;
               align-items: start;
               z-index: 200;
               position: fixed;
               background: white;
               width: 100%;
+              justify-content: space-between;
+            }
+            .logo {
+              width: 150px;
+            }
+            .tool {
+              width: 150px;
             }
             .tool > ul {
               display: flex;
               flex-direction: row;
-              justify-content: space-evenly;
+              justify-content: center;
             }
+
+            .tool ul li {
+              margin-left: 15px;
+            }
+
             .top h2 {
               color: #000;
               margin-left: 10px;
             }
             .container {
-              padding: 51px 16px 24px 16px;
+              width: 100%;
+              padding: 51px 0px 24px 10px;
               border-bottom: 1px #eaeaea solid;
-              grid-column: 2/3;
-              justify-content: center;
               margin: -40px auto;
             }
 
@@ -138,7 +138,8 @@ const SearchRender = ({ visible }) => (
     className="search-container"
     style={{
       opacity: visible ? "1" : "0",
-      top: visible ? "0" : "-999px"
+      left: visible ? "0" : "-999px",
+      top: visible ? "90px" : "-999px"
     }}
   >
     <div className="input container">
@@ -146,24 +147,15 @@ const SearchRender = ({ visible }) => (
     </div>
     <style jsx>{`
       .search-container {
-        grid-row: 2/3;
-        grid-column: 2/3;
-        transition: opacity 200ms ease-in;
-        display: grid;
-        position: absolute;
-        width: 100%;
-        background: white;
-        z-index: 2000;
-      }
-      .navlist-container {
         grid-row-start: 2;
         grid-column: 2/3;
         transition: opacity 200ms ease-in;
         display: grid;
-        grid-template-rows: 264px 264px 90px 1fr;
-        position: absolute;
+        position: fixed;
         width: 100%;
-        overflow-x: hidden;
+        background: white;
+        z-index: 200;
+        height: max-content;
       }
       .container {
         justify-content: center;
@@ -179,7 +171,11 @@ const SearchRender = ({ visible }) => (
 const NavList = ({ productContents, useCaseContents, visible }) => (
   <div
     className="navlist-container"
-    style={{ opacity: visible ? "1" : "0", top: visible ? "0" : "-999px" }}
+    style={{
+      opacity: visible ? "1" : "0",
+      left: visible ? "0" : "-999px",
+      top: visible ? "90px" : "-999px"
+    }}
   >
     <ul className="product container">
       <h2 className="small">Products</h2>
@@ -235,10 +231,12 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
           grid-column: 2/3;
           transition: opacity 200ms ease-in;
           display: grid;
-          grid-template-rows: 264px 264px 90px 1fr;
-          position: absolute;
+          grid-template-rows: 264px 264px 90px 90px;
+          position: fixed;
           width: 100%;
-          overflow-x: hidden;
+          z-index: 200;
+          height: 100%;
+          overflow-y: scroll;
         }
 
         .container {
@@ -258,7 +256,7 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
           grid-row: 1/2;
           display: flex;
           flex-direction: column;
-          margin-top: 30px;
+          margin-top: 10px;
         }
 
         .use {
@@ -274,7 +272,7 @@ const NavList = ({ productContents, useCaseContents, visible }) => (
           color: #000;
         }
         .cta {
-          grid-row: 4 / 5;
+          grid-row: 4/5;
           display: flex;
           flex-direction: row;
           align-items: center;

@@ -71,7 +71,7 @@ const DataTestimonialContainerRender = ({
             overflow-x: none;
           }
           .data-testimonial__container--right {
-            margin: 0px 10px 0px 30px;
+            margin: 0px 0px 0px 40px;
           }
         }
       `}

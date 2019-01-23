@@ -5,9 +5,9 @@ const CtaContainer = withPure(({ children }) => (
   <div className="cta-container">
     <div className="cta-container__slogan">{children}</div>
     <div className="cta-container__btns">
-      <Button size="large"> Yo</Button>
+      <Button size="large"> Try it free</Button>
       <Button size="large" color="white">
-        Wats up
+        About Now
       </Button>
     </div>
     <style jsx>
@@ -35,8 +35,8 @@ const CtaContainer = withPure(({ children }) => (
           .cta-container {
             width: 90vw;
             max-height: 500px;
-            margin: 10px auto;
-            padding: 46px 0px;
+            margin: 0px auto;
+            padding: 40px 0px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;

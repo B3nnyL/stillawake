@@ -53,7 +53,7 @@ const ExampleContainerRender = ({
           display: flex;
           justify-content: center;
           overflow-y: scroll;
-          overflow-x: none;
+          overflow-x: hidden;
         }
 
         .example__container--right {

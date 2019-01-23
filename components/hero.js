@@ -87,6 +87,9 @@ const Hero = withPure(({ title = "Scale design system efficiently" }) => {
                 z-index: 200;
               }
 
+              .hero--title {
+                font-size: 42px;
+              }
               .hero--ctas {
                 display: flex;
                 flex-direction: column;

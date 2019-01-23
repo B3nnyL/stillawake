@@ -1,7 +1,7 @@
 const icons = () => (
   <div className="icons-group">
     <svg
-      width="106px"
+      width="100%"
       height="110px"
       viewBox="0 0 106 110"
       version="1.1"
@@ -322,6 +322,9 @@ const icons = () => (
     </svg>
     <style jsx>
       {`
+        .icons-group {
+          overflow-x: auto;
+        }
         #docz-icon {
           opacity: 0;
           animation-name: example-2;

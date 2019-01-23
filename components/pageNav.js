@@ -11,7 +11,7 @@ const PageNav = withPure(({ display, title, children }) => {
       {display ? (
         <div className="nav__logo">
           <NavLink href="#hero">
-            <Logo size="20" />
+            <Logo size={20} />
           </NavLink>
         </div>
       ) : (

@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
 import { CSSTransition } from "react-transition-group";
+import { Fragment } from "react";
 
 import withPure from "./hoc/withPure";
 import NavLink from "./navLink";
 
 const ExampleIntroText = withPure(({ content, partyTime }) => {
-  const { subtitle, title, description, link } = content;
+  const { subtitle, title, description, blog, resource, reading } = content;
   return (
     <div className="example-text__container">
       <CSSTransition
@@ -34,16 +35,33 @@ const ExampleIntroText = withPure(({ content, partyTime }) => {
         unmountOnExit
       >
         <div className="link-group">
-          <div className="example-text--link">
-            <NavLink className="no-width-lmt link blue" href={link.href}>
-              Read case study
-            </NavLink>
-          </div>
-          <div className="example-text--link">
-            <NavLink className="no-width-lmt link" href={link.href}>
-              Read Docs
-            </NavLink>
-          </div>
+          {blog ? (
+            <div className="example-text--link">
+              <NavLink className="no-width-lmt link blue" href={blog.href}>
+                {blog.text}
+              </NavLink>
+            </div>
+          ) : (
+            <Fragment />
+          )}
+          {resource ? (
+            <div className="example-text--link">
+              <NavLink className="no-width-lmt link" href={resource.href}>
+                {resource.text}
+              </NavLink>
+            </div>
+          ) : (
+            <Fragment />
+          )}
+          {reading ? (
+            <div className="example-text--link">
+              <NavLink className="no-width-lmt link " href={reading.href}>
+                {reading.text}
+              </NavLink>
+            </div>
+          ) : (
+            <Fragment />
+          )}
         </div>
       </CSSTransition>
       <style jsx>
@@ -59,6 +77,7 @@ const ExampleIntroText = withPure(({ content, partyTime }) => {
           .example-text--subtitle {
             font-size: 12px;
             color: #444;
+            letter-spacing: 0.8px;
           }
           .example-text--desc {
             padding: 15px 0 19px 0;
@@ -76,7 +95,8 @@ const ExampleIntroText = withPure(({ content, partyTime }) => {
               max-width: 400px;
               margin: auto;
               width: 90vw;
-              height: 227px;
+              height: max-content;
+              max-height: 1000px;
               padding: 40px 0px;
             }
           }
