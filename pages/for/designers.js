@@ -26,7 +26,7 @@ const Design = () => (
     <TopBar>
       👩‍🎤 Make your serverless design system
       <a style={{ textDecoration: "underline", margin: "0px 10px" }}>
-        Read The Case Study
+        Read more
       </a>
     </TopBar>
     <MediaQuery query="(min-width:997px)">
@@ -42,7 +42,7 @@ const Design = () => (
       <CollaborateExample identity="collaboration" />
       <ResourceContainer />
       <CtaContainer>
-        <h1>Just push and code</h1>
+        <h1>Just design, code and push.</h1>
       </CtaContainer>
     </MediaQuery>
     <MediaQuery query="(max-width: 996px)">
@@ -59,7 +59,7 @@ const Design = () => (
       <CollaborateExample />
       <ResourceContainer />
       <CtaContainer>
-        <h1>Just push and code</h1>
+        <h1>Just design, code and push.</h1>
       </CtaContainer>
     </MediaQuery>
 
@@ -133,6 +133,11 @@ const Design = () => (
         }
 
         @media screen and (max-width: 996px) {
+           {
+            /* :global(*) {
+            overflow-x: hidden;
+          } */
+          }
           :global(h1) {
             text-align: center;
           }
